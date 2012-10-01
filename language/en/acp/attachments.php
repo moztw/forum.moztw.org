@@ -73,7 +73,7 @@ $lang = array_merge($lang, array(
 	'ATTACH_EXT_GROUPS_URL'				=> 'Extension groups',
 	'ATTACH_ID'							=> 'ID',
 	'ATTACH_MAX_FILESIZE'				=> 'Maximum file size',
-	'ATTACH_MAX_FILESIZE_EXPLAIN'		=> 'Maximum size of each file, with 0 being unlimited.',
+	'ATTACH_MAX_FILESIZE_EXPLAIN'		=> 'Maximum size of each file. If this value is 0, the uploadable filesize is only limited by your PHP configuration.',
 	'ATTACH_MAX_PM_FILESIZE'			=> 'Maximum file size messaging',
 	'ATTACH_MAX_PM_FILESIZE_EXPLAIN'   => 'Maximum size of each file, with 0 being unlimited, attached to a private message.',
 	'ATTACH_ORPHAN_URL'					=> 'Orphan attachments',
@@ -101,7 +101,7 @@ $lang = array_merge($lang, array(
 	'DISPLAY_INLINED_EXPLAIN'		=> 'If set to No image attachments will show as a link.',
 	'DISPLAY_ORDER'					=> 'Attachment display order',
 	'DISPLAY_ORDER_EXPLAIN'			=> 'Display attachments ordered by time.',
-	
+
 	'EDIT_EXTENSION_GROUP'			=> 'Edit extension group',
 	'EXCLUDE_ENTERED_IP'			=> 'Enable this to exclude the entered IP/hostname.',
 	'EXCLUDE_FROM_ALLOWED_IP'		=> 'Exclude IP from allowed IPs/hostnames',
