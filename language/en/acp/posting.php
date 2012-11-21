@@ -217,6 +217,11 @@ $lang = array_merge($lang, array(
 	'NO_WORD'	=> 'No word selected for editing.',
 
 	'REPLACEMENT'	=> 'Replacement',
+	
+	'BLOCK_WORD'	=> 'Block word',
+	'BLOCK'		=> 'Block',
+	'BLOCK_CODE'	=> 'blacklisted_site',
+	'SEND_CONFIRM'	=> 'Now submit the form',
 
 	'UPDATE_WORD'	=> 'Update word censor',
 

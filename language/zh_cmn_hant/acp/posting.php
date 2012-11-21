@@ -200,6 +200,11 @@ $lang = array_merge($lang, array(
 
 	'REPLACEMENT'	=> '替代字詞',
 
+ 	'BLOCK_WORD'	=> '封鎖單字',
+	'BLOCK'		=> '封鎖',
+	'BLOCK_CODE'	=> 'blacklisted_site',
+	'SEND_CONFIRM'	=> '立刻送出表單',
+
 	'UPDATE_WORD'	=> '更新過濾字詞',
 
 	'WORD'				=> '過濾字詞',

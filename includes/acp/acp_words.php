@@ -113,6 +113,7 @@ class acp_words
 				}
 
 				$cache->destroy('_word_censors');
+				$cache->purge();
 
 				$log_action = ($word_id) ? 'LOG_WORD_EDIT' : 'LOG_WORD_ADD';
 				add_log('admin', $log_action, $word);

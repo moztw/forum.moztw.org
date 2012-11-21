@@ -22,6 +22,21 @@
 			<dt><label for="replacement">{L_REPLACEMENT}</label></dt>
 			<dd><input id="replacement" type="text" name="replacement" value="{REPLACEMENT}" maxlength="255" /></dd>
 		</dl>
+
+		<dl>
+			<dt><label for="block">{L_BLOCK_WORD}</label></dt>
+			<dd><input id="block" type="button" value="{L_BLOCK}" class="button1" /></dd>
+		</dl>
+		<script type="text/javascript">
+			window.onload = function() {
+				document.getElementById('block').onclick = function() {
+					this.onclick = '';
+					this.value = '{LA_SEND_CONFIRM}';
+					this.className = this.className.replace('button1','');
+					document.getElementById('replacement').value = '{LA_BLOCK_CODE}';
+				}
+			}
+		</script>
 		{S_HIDDEN_FIELDS}
 
 	<p class="submit-buttons">

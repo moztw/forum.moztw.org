@@ -1001,6 +1001,20 @@ if ($submit || $preview || $refresh)
 	}
 
 	// Store message, sync counters
+	
+	// Blacklisted sites check
+	$site_censor_data = $cache->obtain_site_blacklist();
+	if (sizeof($site_censor_data))
+	{
+		preg_match_all($site_censor_data, utf8_normalize_nfc(request_var('message', '', true)), $word);
+		$remove_duplicate_item = array_unique($word[0]);
+		$blacklisted_sites = implode(',', $remove_duplicate_item);
+		if ($blacklisted_sites != '')
+		{
+			$error[] = sprintf($user->lang['CANNOT_POST_BLACKLISTED_SITE'], $blacklisted_sites);
+		}
+	}
+
 	if (!sizeof($error) && $submit)
 	{
 		// Check if we want to de-globalize the topic... and ask for new forum

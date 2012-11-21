@@ -71,6 +71,36 @@ class cache extends acm
 	* Obtain list of naughty words and build preg style replacement arrays for use by the
 	* calling script
 	*/
+
+	/**
+	 * Obtain list of blacklisted sites and build preg style for use by the calling script
+	*/
+	function obtain_site_blacklist()
+	{
+		global $db;
+
+		if (($all_site_blacklist = $this->get('_site_blacklist')) === false)
+		{
+			$sql = 'SELECT word, replacement
+				FROM ' . WORDS_TABLE ."
+				WHERE replacement = 'blacklisted_site'";
+			$result = $db->sql_query($sql);
+
+			$site_blacklist = array();
+			while ($row = $db->sql_fetchrow($result))
+			{
+				$site_blacklist[] = '(' . str_replace('\*', '\w*?', preg_quote($row['word'], '/')) . ')';
+			}
+			$db->sql_freeresult($result);
+			$all_site_blacklist = implode('|', $site_blacklist);
+			$all_site_blacklist = '/' . $all_site_blacklist . '/';
+
+			$this->put('_site_blacklist', $all_site_blacklist);
+		}
+
+	return $all_site_blacklist;
+	}
+
 	function obtain_word_list()
 	{
 		global $db;

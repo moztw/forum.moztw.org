@@ -68,6 +68,7 @@ $lang = array_merge($lang, array(
 	'CANNOT_EDIT_POST_LOCKED'	=> '這篇文章已經被鎖定，您不能編輯它。',
 	'CANNOT_EDIT_TIME'	=> '您不能編輯或刪除這篇文章。',
 	'CANNOT_POST_ANNOUNCE'	=> '很抱歉！您不能發表公告主題。',
+	'CANNOT_POST_BLACKLISTED_SITE'		=> '很抱歉！您不能發表提到 %s 的訊息。',
 	'CANNOT_POST_STICKY'	=> '很抱歉！您不能發表置頂主題。',
 	'CHANGE_TOPIC_TO'	=> '將主題類型轉換成',
 	'CLOSE_TAGS'	=> '關閉標籤',
