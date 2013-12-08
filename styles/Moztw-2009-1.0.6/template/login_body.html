@@ -93,37 +93,6 @@
 
 </form>
 
-
-<!-- OpenID Login -->
-<br>
-<div id="openid">
-	<form method="get" action="try_auth.php">
-	{S_FORM_TOKEN}
-	<table class="tablebg" width="100%" cellspacing="1">
-	<tr><th colspan="2" valign="middle">OpenID</th></tr>
-	<tr> 
-		<td class="row1" width="50%" align="center"><span class="gensmall">使用 <a title="About OpenID" href="http://openid.net/what/">OpenID</a> 登入</span></td>
-		<td class="row2">
-			<fieldset class="quick-login">
-				<input type="hidden" name="action" value="verify" />
-				<label for="openid_url">OpenID:</label>
-				<input type="text" name="openid_url" tabindex="6" class="inputbox openid_login" size="25"  title="{L_USERNAME}" />
-			</fieldset>
-		</td>
-	</tr>
-	<tr>
-		<td class="cat" align="center" colspan="2">
-			<fieldset>
-				<input class="btnmain" type="submit" tabindex="7" name="login" value="{L_LOGIN}" />
-			</fieldset>
-		</td>
-	</tr>
-	</table>
-	</form>
-</div>
-
-
-
 <br clear="all" />
 
 <!-- INCLUDE breadcrumbs.html -->

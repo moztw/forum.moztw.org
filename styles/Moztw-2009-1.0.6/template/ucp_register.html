@@ -14,31 +14,6 @@
 // ]]>
 </script>
 
-
-<!-- OpenID -->
-<div id="openid">
-	<form method="get" action="try_auth.php">
-	{S_FORM_TOKEN}
-	<table class="tablebg" width="100%" cellspacing="1">
-	<tr><th colspan="2" valign="middle">使用 OpenID 註冊</th></tr>
-	<tr> 
-		<td class="row1" width="38%">
-			<p class="gensmall">OpenID 讓您能使用其他網站的帳號登入敝站，避免記憶多重帳號與重新輸入註冊資料的困擾。常見的 OpenID 服務商有 Google、Yahoo、WordPress 等，您也可以至 <a href="http://myid.tw">myID.tw</a> 免費申請 OpenID 帳號使用。</P>
-		</td>
-		<td class="row2">
-			<fieldset class="quick-login">
-				<input type="hidden" name="action" value="verify" />
-				<input type="text" name="openid_url" tabindex="6" class="inputbox openid_login" size="25"  title="{L_USERNAME}" />
-				<input class="btnmain" type="submit" tabindex="7" name="login" value="{L_SUBMIT}" />
-			</fieldset>
-		</td>
-	</tr>
-	</table>
-	</form>
-</div>	
-
-<br />
-
 <form name="register" method="post" action="{S_UCP_ACTION}">
 <table class="tablebg" width="100%" cellspacing="1">
 <tr>
