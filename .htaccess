@@ -22,4 +22,7 @@ Order allow,deny
 Deny from all 
 </Files>
 
+<IfModule mod_rewrite.c>
+    RewriteRule \.git/ - [F]
+</IfModule>
 AddType application/x-xpinstall .xpi
