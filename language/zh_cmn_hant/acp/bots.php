@@ -4,7 +4,7 @@
 * acp_bots [正體中文]
 *
 * @package language
-* @version $Id: bots.php 8479 2008-03-29 00:22:48Z naderman $
+* @version $Id$
 * @copyright (c) 2001 - 2007 phpBB TW Group (心靈捕手)
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *

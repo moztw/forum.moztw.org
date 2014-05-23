@@ -4,7 +4,7 @@
 * acp_search [正體中文]
 *
 * @package language
-* @version $Id: search.php 9438 2009-04-11 11:09:45Z acydburn $
+* @version $Id$
 * @copyright (c) 2001 - 2007 phpBB TW Group (心靈捕手)
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
@@ -53,12 +53,14 @@ $lang = array_merge($lang, array(
 	'DELETING_INDEX_IN_PROGRESS_EXPLAIN'	=> '後端搜尋正在清除索引，這需要花幾分鐘的時間。',
 
 	'FULLTEXT_MYSQL_INCOMPATIBLE_VERSION'	=> '後端 MySQL 全文索引只能在 MySQL4 或更高的版本中使用。',
-	'FULLTEXT_MYSQL_NOT_MYISAM'				=> 'MySQL 全文索引只能在 MyISAM (Storage Engines) 型態的資料表使用。',
+	'FULLTEXT_MYSQL_NOT_SUPPORTED'			=> 'MySQL 全文索引只能在 MyISAM 或 InnoDB 型態的資料表使用。在 InnoDB 型態的資料表使用全文索引，需要 MySQL 5.6.4 或之後的版本。',
 	'FULLTEXT_MYSQL_TOTAL_POSTS'			=> '索引文章總數',
 	'FULLTEXT_MYSQL_MBSTRING'				=> '使用 mbstring 支援非拉丁 UTF-8 字元:',
 	'FULLTEXT_MYSQL_PCRE'					=> '使用 PCRE 支援非拉丁 UTF-8 字元:',
 	'FULLTEXT_MYSQL_MBSTRING_EXPLAIN'		=> '如果 PCRE 沒有 unicode 字元屬性，那麼後端搜尋會嘗試使用 mbstring 的正規表達機器。',
 	'FULLTEXT_MYSQL_PCRE_EXPLAIN'			=> '如果您需要搜尋非拉丁字元，這個後端搜尋需要使用 PCRE unicode 字元屬性，這只在 PHP 4.4、5.1 或更高版本中有效。',
+       'FULLTEXT_MYSQL_MIN_SEARCH_CHARS_EXPLAIN'   => '至少要有這麼多字元的字詞被索引，以便搜尋。您或您的主機只能由改變 MySQL 的設定來改變它。',
+       'FULLTEXT_MYSQL_MAX_SEARCH_CHARS_EXPLAIN'   => '沒有比這更多的字元之字詞被索引，以便搜尋。您或您的主機只能由改變 MySQL 的設定來改變它。',
 
 	'GENERAL_SEARCH_SETTINGS'				=> '一般搜尋設定',
 	'GO_TO_SEARCH_INDEX'					=> '前往搜尋頁面',

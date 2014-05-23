@@ -4,7 +4,7 @@
 * acp_ban [正體中文]
 *
 * @package language
-* @version $Id: ban.php 9727 2009-07-07 13:33:53Z nickvergessen $
+* @version $Id$
 * @copyright (c) 2001 - 2007 phpBB TW Group (心靈捕手)
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
@@ -67,6 +67,9 @@ $lang = array_merge($lang, array(
 	'IP_UNBAN_EXPLAIN'			=> '您可以使用適當的滑鼠與鍵盤的結合，一次選擇多個 IP，執行解除封鎖或解除排除的操作。排除的 IP 有特別背景標示。',
 
 	'LENGTH_BAN_INVALID'		=> '日期格式必須是 <kbd>YYYY-MM-DD</kbd>。',
+
+	'OPTIONS_BANNED'			=> '已封鎖',
+	'OPTIONS_EXCLUDED'			=> '已排除',
 
 	'PERMANENT'		=> '永久的',
 

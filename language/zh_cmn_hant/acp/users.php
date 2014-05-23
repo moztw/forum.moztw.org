@@ -42,6 +42,7 @@ $lang = array_merge($lang, array(
 	'BAN_ALREADY_ENTERED'	=> '封鎖在先前就已經輸入成功，封鎖列表沒有更新。',
 	'BAN_SUCCESSFUL'		=> '封鎖輸入成功。',
 
+	'CANNOT_BAN_ANONYMOUS'         => '您不被允許去封鎖匿名帳號。匿名使用者的權限可以在「權限」標籤底下設定。',
 	'CANNOT_BAN_FOUNDER'			=> '您不被允許封鎖創始人帳號。',
 	'CANNOT_BAN_YOURSELF'			=> '您不被允許封鎖自己的帳號。',
 	'CANNOT_DEACTIVATE_BOT'			=> '您不被允許停用機器人建立的帳號。請改以管理機器人頁面停用機器人。',
@@ -58,7 +59,7 @@ $lang = array_merge($lang, array(
 
 	'DELETE_POSTS'	=> '刪除文章',
 	'DELETE_USER'	=> '刪除會員',
-	'DELETE_USER_EXPLAIN'	=> '請注意！ 刪除會員是最後的手段，他們不能恢復',
+	'DELETE_USER_EXPLAIN'	=> '請注意！ 刪除會員是最後的手段，他們不能恢復。該會員發送的未讀之私人信息將被刪除，並不會提供給收件者。',
 
 	'FORCE_REACTIVATION_SUCCESS'	=> '強迫再啟用成功。',
 	'FOUNDER'						=> '創始人',
@@ -123,6 +124,7 @@ $lang = array_merge($lang, array(
 	'USER_GROUP_SPECIAL'			=> '特殊群組的會員',
 	'USER_LIFTED_NR'				=> '已成功移除會員的新註冊會員身份。',
 	'USER_NO_ATTACHMENTS'			=> '沒有可顯示的附加檔案。',
+	'USER_NO_POSTS_TO_DELETE'			=> '沒有文章要保留或刪除。',
 	'USER_OUTBOX_EMPTIED'			=> '已成功清空會員的 PM 寄件夾。',
 	'USER_OUTBOX_EMPTY'				=> '會員的 PM 寄件夾已經清空。',
 	'USER_OVERVIEW_UPDATED'			=> '會員細節更新成功。',

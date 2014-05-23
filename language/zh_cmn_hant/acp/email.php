@@ -4,7 +4,7 @@
 * acp_email [正體中文]
 *
 * @package language
-* @version $Id: email.php,v 1.16 2007/10/04 15:07:24 acydburn Exp $
+* @version $Id$
 * @copyright (c) 2001 - 2007 phpBB TW Group (心靈捕手)
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
@@ -53,13 +53,15 @@ $lang = array_merge($lang, array(
 	'SEND_TO_USERS'			=> '發送到會員',
 	'SEND_TO_USERS_EXPLAIN'	=> '輸入的會員名稱將覆蓋上面選擇的群組。每一行輸入一個會員名稱。',
 
+	'MAIL_BANNED'			=> '寄送郵件給被封鎖的會員',
+	'MAIL_BANNED_EXPLAIN'	=> '當寄送大量郵件給群組時，您可以在此選擇是否被封鎖的會員也收得到郵件。',
 	'MAIL_HIGH_PRIORITY'	=> '高',
 	'MAIL_LOW_PRIORITY'		=> '低',
 	'MAIL_NORMAL_PRIORITY'	=> '一般',
 	'MAIL_PRIORITY'			=> '郵件優先等級',
 	'MASS_MESSAGE'			=> '您的訊息',
 	'MASS_MESSAGE_EXPLAIN'	=> '請注意！您只能使用純文字格式。所有的標籤註記都會在發送前被移除。',
-	
+
 	'NO_EMAIL_MESSAGE'		=> '您必須輸入訊息內容。',
 	'NO_EMAIL_SUBJECT'		=> '您必須輸入信件主旨。',
 ));

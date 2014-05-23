@@ -4,7 +4,7 @@
 * acp_modules [正體中文]
 *
 * @package language
-* @version $Id: modules.php,v 1.13 2007/10/04 15:07:24 acydburn Exp $
+* @version $Id$
 * @copyright (c) 2001 - 2007 phpBB TW Group (心靈捕手)
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *

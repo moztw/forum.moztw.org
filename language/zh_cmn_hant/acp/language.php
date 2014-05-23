@@ -4,7 +4,7 @@
 * acp_language [正體中文]
 *
 * @package language
-* @version $Id: language.php 9649 2009-06-21 19:17:20Z bantu $
+* @version $Id$
 * @copyright (c) 2001 - 2007 phpBB TW Group (心靈捕手)
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
@@ -59,6 +59,7 @@ $lang = array_merge($lang, array(
 	'LANGUAGE_PACK_DELETED'				=> '這份語言包 <strong>%s</strong> 已經移除完畢。所有使用此語言包的會員將會重設為系統預設語言。',
 	'LANGUAGE_PACK_DETAILS'				=> '語言包細節',
 	'LANGUAGE_PACK_INSTALLED'			=> '該語言包 <strong>%s</strong> 已經安裝完畢。',
+	'LANGUAGE_PACK_CPF_UPDATE'			=> '自訂個人資料欄位的語言字串已經被預設的語言複製。如果需要的話，那麼請改變它們。',
 	'LANGUAGE_PACK_ISO'					=> 'ISO',
 	'LANGUAGE_PACK_LOCALNAME'			=> '當地名稱',
 	'LANGUAGE_PACK_NAME'				=> '檔名',

@@ -4,7 +4,7 @@
 * acp_groups [正體中文]
 *
 * @package language
-* @version $Id: groups.php 9701 2009-06-28 12:13:11Z toonarmy $
+* @version $Id$
 * @copyright (c) 2001 - 2007 phpBB TW Group (心靈捕手)
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *

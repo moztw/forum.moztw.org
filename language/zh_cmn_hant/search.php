@@ -4,7 +4,7 @@
 * search [正體中文]
 *
 * @package language
-* @version $Id: search.php 10004 2009-08-17 13:25:04Z rxu $
+* @version $Id$
 * @copyright (c) 2001 - 2007 phpBB TW Group (Mac)
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
@@ -54,6 +54,7 @@ $lang = array_merge($lang, array(
 
 	'LOGIN_EXPLAIN_EGOSEARCH'	=> '您必須註冊並且登入後才能檢視您自己的文章。',
 	'LOGIN_EXPLAIN_UNREADSEARCH'=> '您必須註冊並且登入後才能檢視您尚未閱讀的文章。',
+	'LOGIN_EXPLAIN_NEWPOSTS'	=> '您必須註冊並且登入後才能檢視自從您上次訪問後之新的文章。',
 
 	'MAX_NUM_SEARCH_KEYWORDS_REFINE'	=> '您所指定要搜尋的字數太多。請不要輸入超過 %1$d 字。',
 
@@ -62,6 +63,7 @@ $lang = array_merge($lang, array(
 	'NO_SEARCH'				=> '很抱歉！您不被允許使用搜尋系統。',
 	'NO_SEARCH_RESULTS'		=> '沒有搜尋到符合的結果。',
 	'NO_SEARCH_TIME'		=> '很抱歉! 您現在無法使用搜尋系統，請稍後再試。',
+	'NO_SEARCH_UNREADS'      => '很抱歉！這個論壇禁止搜尋未閱讀文章。',
 	'WORD_IN_NO_POST'		=> '沒有文章被搜尋到，因為這個關鍵字 <strong>%s</strong> 不被包含在任何文章中。',
 	'WORDS_IN_NO_POST'		=> '沒有文章被搜尋到，因為這些關鍵字 <strong>%s</strong> 不被包含在任何文章中。',
 
@@ -75,6 +77,7 @@ $lang = array_merge($lang, array(
 
 	'SEARCHED_FOR'				=> '使用過的關鍵字',
 	'SEARCHED_TOPIC'			=> '搜尋過的主題',
+	'SEARCHED_QUERY'			=> '搜尋過的方式',
 	'SEARCH_ALL_TERMS'			=> '搜尋符合以上所有關鍵字的資料',
 	'SEARCH_ANY_TERMS'			=> '搜尋符合以上任一關鍵字的資料',
 	'SEARCH_AUTHOR'				=> '搜尋發表人',

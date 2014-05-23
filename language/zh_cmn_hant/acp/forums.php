@@ -4,7 +4,7 @@
 * acp_forums [正體中文]
 *
 * @package language
-* @version $Id: forums.php 10531 2010-02-23 23:50:36Z naderman $
+* @version $Id$
 * @copyright (c) 2001 - 2007 phpBB TW Group (心靈捕手)
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
@@ -72,7 +72,7 @@ $lang = array_merge($lang, array(
 	'ENABLE_TOPIC_ICONS'			=> '能夠使用主題圖示',
 
 	'FORUM_ADMIN'						=> '版面管理',
-	'FORUM_ADMIN_EXPLAIN'				=> '在 phpBB3 中沒有分區，所有都是以版面為基礎。每個版面可以擁有無限數量的子版面，並且您可以設定哪些能否發文。(例如：是否像是舊的分區)。在這裡，您能增加、編輯、刪除、鎖定、解鎖各個版面，並設定一些額外的控制。如果您版面的文章和主題統計失真，您可以重新統計一下。<strong>您需要為新建的版面複製或設定適當的權限才得以顯示。</strong>',
+	'FORUM_ADMIN_EXPLAIN'				=> '在 phpBB3 中的所有事物都是以版面為基礎。一個分區只是一個版面的特殊類型。每個版面可以擁有無限數量的子版面，並且您可以設定哪些能否發文。(例如：是否像是舊的分區)。在這裡，您能增加、編輯、刪除、鎖定、解鎖各個版面，並設定一些額外的控制。如果您版面的文章和主題統計失真，您可以重新統計一下。<strong>您需要為新建的版面複製或設定適當的權限才得以顯示。</strong>',
 	'FORUM_AUTO_PRUNE'					=> '能夠使用自動刪除',
 	'FORUM_AUTO_PRUNE_EXPLAIN'			=> '刪除版面的主題，在下面設定頻率/時間參數。',
 	'FORUM_CREATED'						=> '版面建立成功。',
@@ -98,7 +98,7 @@ $lang = array_merge($lang, array(
 	'FORUM_PASSWORD_CONFIRM_EXPLAIN'	=> '如果您輸入了版面密碼，才需要再輸入一次確認。',
 	'FORUM_PASSWORD_EXPLAIN'			=> '使用權限系統指定訪問這個版面的密碼。',
 	'FORUM_PASSWORD_UNSET'				=> '移除版面密碼',
-	'FORUM_PASSWORD_UNSET_EXPLAIN'		=> '如果您要移除版面密碼，那麼請檢查這裡。',
+	'FORUM_PASSWORD_UNSET_EXPLAIN'		=> '如果您要移除版面密碼，那麼請勾選這裡。',
 	'FORUM_PASSWORD_OLD'				=> '這個版面密碼目前是使用舊的加密方式，應該進行變更。',
 	'FORUM_PASSWORD_MISMATCH'			=> '您輸入的密碼不對。',
 	'FORUM_PRUNE_SETTINGS'				=> '版面刪除設定',

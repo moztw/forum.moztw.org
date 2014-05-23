@@ -4,7 +4,7 @@
 * viewforum [正體中文]
 *
 * @package language
-* @version $Id: viewforum.php,v 1.18 2007/10/04 15:07:24 acydburn Exp $
+* @version $Id$
 * @copyright (c) 2001 - 2007 phpBB TW Group (Mac)
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
@@ -48,15 +48,20 @@ $lang = array_merge($lang, array(
 
 	'MARK_TOPICS_READ'		=> '將所有主題標示為已閱讀',
 
-	'NEW_POSTS_HOT'			=> '有新文章【熱門的】',
-	'NEW_POSTS_LOCKED'		=> '有新文章【鎖定的】',
-	'NO_NEW_POSTS_HOT'		=> '無新文章【熱門的】',
-	'NO_NEW_POSTS_LOCKED'	=> '無新文章【鎖定的】',
-	'NO_READ_ACCESS'		=> '您沒有閱讀本版面文章的權限。',
+	'NEW_POSTS_HOT'         => '有新文章【熱門的】',   // 不再使用
+	'NEW_POSTS_LOCKED'      => '有新文章【鎖定的】',   // 不再使用
+	'NO_NEW_POSTS_HOT'      => '無新文章【熱門的】',   // 不再使用
+	'NO_NEW_POSTS_LOCKED'   => '無新文章【鎖定的】',   // 不再使用
+	'NO_READ_ACCESS'      => '您沒有閱讀這個版面的主題之權限。',
+	'NO_UNREAD_POSTS_HOT'      => '無未閱讀文章【熱門的】',
+	'NO_UNREAD_POSTS_LOCKED'   => '無未閱讀文章【鎖定的】',
 
-	'POST_FORUM_LOCKED'		=> '版面已鎖定',
+	'POST_FORUM_LOCKED'      => '版面已鎖定',
 
-	'TOPICS_MARKED'			=> '這個版面的主題已被標示為已閱讀。',
+	'TOPICS_MARKED'         => '這個版面的主題已被標示為已閱讀。',
+
+	'UNREAD_POSTS_HOT'      => '有未閱讀文章【熱門的】',
+	'UNREAD_POSTS_LOCKED'   => '有未閱讀文章【鎖定的】',
 
 	'VIEW_FORUM'			=> '檢視版面',
 	'VIEW_FORUM_TOPIC'		=> '1 個主題',

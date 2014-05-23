@@ -1,10 +1,10 @@
 <?php
-/** 
+/**
 *
 * common [正體中文]
 *
 * @package language
-* @version $Id: common.php 10441 2010-01-25 15:57:10Z nickvergessen $
+* @version $Id$
 * @copyright (c) 2001 - 2007 phpBB TW Group (yoshika, 心靈捕手, 動機不明)
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
@@ -43,7 +43,7 @@ $lang = array_merge($lang, array(
 	'TRANSLATION_INFO'	=> '正體中文語系由 <a href="http://phpbb-tw.net/" onclick="window.open(this.href);return false;"><span style="color:#ff6633"><strong>竹貓星球</strong></span></a> 維護製作',
 	'DIRECTION'			=> 'ltr',
 	'DATE_FORMAT'	=> '|Y-m-d|',// 2007-01-01
-	'USER_LANG'	=> 'zh-tw',
+	'USER_LANG'	=> 'zh-cmn-hant',
 
 	'1_DAY'	=> '1天',
 	'1_MONTH'	=> '1個月',
@@ -124,7 +124,7 @@ $lang = array_merge($lang, array(
 	'COMMA_SEPARATOR'	=> '，',
 	'CONFIRM'	=> '確認',
 	'CONFIRM_CODE'	=> '確認代碼',
-	'CONFIRM_CODE_EXPLAIN'	=> '請正確輸入它所顯示的代碼，不必區分大小寫，而且沒有數字「0」。',
+	'CONFIRM_CODE_EXPLAIN'   => '請正確輸入它所顯示的代碼，不必區分大小寫。',
 	'CONFIRM_CODE_WRONG'	=> '您輸入的確認代碼有誤。',
 	'CONFIRM_OPERATION'	=> '您確認要執行這個操作嗎？',
 	'CONGRATULATIONS'	=> '恭喜您',
@@ -160,11 +160,13 @@ $lang = array_merge($lang, array(
 	'EDIT_POST'	=> '編輯文章',
 	'EMAIL'	=> 'E-mail',// EMAIL_ADDRESS 的簡寫
 	'EMAIL_ADDRESS'	=> 'E-mail 位址',
+	'EMAIL_INVALID_EMAIL'				=> '您輸入的 e-mail 位址是無效的。',
 	'EMAIL_SMTP_ERROR_RESPONSE'	=> '發送 e-mail 在 <strong>第 %1$s 行</strong> 遇到問題。回應訊息：%2$s。',
 	'EMPTY_SUBJECT'	=> '您必須為新主題指定一個標題。',
 	'EMPTY_MESSAGE_SUBJECT'	=> '您沒有輸入標題。',
 	'ENABLED'	=> '啟用',
 	'ENCLOSURE'	=> '包圍',
+	'ENTER_USERNAME'					=> '輸入會員名稱',
 	'ERR_CHANGING_DIRECTORY'	=> '無法變更資料夾。',
 	'ERR_CONNECTING_SERVER'	=> '連接伺服器錯誤。',
 	'ERR_JAB_AUTH'	=> '無法取得 Jabber 伺服器授權。',
@@ -190,7 +192,7 @@ $lang = array_merge($lang, array(
 	'FORM_INVALID'	=> '表單送出無效。請再執行一次。',
 	'FORUM'	=> '版面',
 	'FORUMS'	=> '版面',
-	'FORUMS_MARKED'	=> '所有版面已經被標示為已閱讀。',
+	'FORUMS_MARKED'			=> '版面已經被標示為已閱讀。',
 	'FORUM_CAT'	=> '版面類別',
 	'FORUM_INDEX'	=> '討論區首頁',
 	'FORUM_LINK'	=> '版面連結',
@@ -200,6 +202,7 @@ $lang = array_merge($lang, array(
 	'FORUM_RULES_LINK'	=> '請點選這裡檢視版面規則',
 	'FROM'	=> '從',
 	'FSOCK_DISABLED'	=> '操作無法完成，因為 <var>fsockopen</var> 函數被停用或是伺服器沒有回應。',
+	'FSOCK_TIMEOUT'			=> '當從網路串流讀取時，發生逾時。',
 
 	'FTP_FSOCK_HOST'	=> 'FTP 主機',
 	'FTP_FSOCK_HOST_EXPLAIN'	=> '您的 FTP 伺服器連結位址。',
@@ -295,6 +298,7 @@ $lang = array_merge($lang, array(
 	'LAST_VISIT'	=> '最後訪問',
 	'LDAP_NO_LDAP_EXTENSION'	=> 'LDAP 模組無法使用。',
 	'LDAP_NO_SERVER_CONNECTION'	=> '無法連線到 LDAP 伺服器。',
+	'LDAP_SEARCH_FAILED'            => '當搜尋 LDAP 目錄時發生錯誤。',
 	'LEGEND'	=> '顏色說明',
 	'LOCATION'	=> '來自',
 	'LOCK_POST'	=> '鎖定文章',
@@ -303,10 +307,10 @@ $lang = array_merge($lang, array(
 	'LOGIN'	=> '登入',
 	'LOGIN_CHECK_PM'	=> '登入檢查您的私人訊息。',
 	'LOGIN_CONFIRMATION'	=> '登入確認',
-	'LOGIN_CONFIRM_EXPLAIN'	=> '為了防止暴力破解會員密碼，管理員將會要求您在超過最大嘗試登入次數後輸入一組確認代碼，確認代碼顯示在如下所示的圖檔中。如果您有視覺相關問題因而無法瀏覽判斷時，請聯絡 %s管理員%s。',
-	'LOGIN_ERROR_ATTEMPTS'	=> '您的登入錯誤超過了討論區設定的嘗試次數上限。現在除了輸入您的會員名稱和密碼外，還需要輸入下圖所示的確認代碼。全體討論區會員因資安顧慮，強制於 12/8 起修改密碼，請使用下方的「忘記密碼」功能取得新密碼，並請參考 <a href="http://forum.moztw.org/viewtopic.php?f=7&t=40687">此公告</a>',
+	'LOGIN_CONFIRM_EXPLAIN'            => '為了防止暴力破解會員帳號，論壇將會要求您在超過最大嘗試登入次數後輸入一組確認代碼，確認代碼顯示在如下所示的圖檔中。如果您有視覺相關問題因而無法瀏覽判斷時，請聯絡 %s論壇管理員%s。', // 不使用的
+	'LOGIN_ERROR_ATTEMPTS'            => '您的登入錯誤，超過了討論區設定的嘗試次數上限。現在除了輸入您的會員名稱和密碼外，還需要解決底下的 CAPTCHA。',
 	'LOGIN_ERROR_EXTERNAL_AUTH_APACHE'	=> '您的瀏覽未獲 Apache 伺服器授權。',
-	'LOGIN_ERROR_PASSWORD'	=> '您的密碼無效。全體討論區會員因資安顧慮，強制於 12/8 起修改密碼，請使用下方的「忘記密碼」功能取得新密碼，並請參考 <a href="http://forum.moztw.org/viewtopic.php?f=7&t=40687">此公告</a>。',
+	'LOGIN_ERROR_PASSWORD'	=> '您輸入了一個無效的密碼。請確認後重新嘗試登入。如果問題依舊存在請聯絡 %s管理員%s。',
 	'LOGIN_ERROR_PASSWORD_CONVERT'	=> '在討論區升級中無法轉換您的密碼。請 %s申請一個新密碼%s。如果您還遇到其他的問題，請聯絡 %s管理員%s。',
 	'LOGIN_ERROR_USERNAME'	=> '您輸入了一個無效的會員名稱。請檢查後重新輸入。如果問題依舊存在請聯絡 %s管理員%s。',
 	'LOGIN_FORUM'	=> '您需要輸入符合的密碼才能瀏覽這個版面。',
@@ -321,13 +325,14 @@ $lang = array_merge($lang, array(
 	'MARK'	=> '標示',
 	'MARK_ALL'	=> '選擇全部',
 	'MARK_FORUMS_READ'	=> '將版面標示為已閱讀',
+	'MARK_SUBFORUMS_READ'	=> '將子版面標示為已閱讀',
 	'MB'					=> 'MB',
 	'MIB'					=> 'MiB',
 	'MCP'	=> '版主控制台 (MCP)',
 	'MEMBERLIST'	=> '會員列表',
 	'MEMBERLIST_EXPLAIN'	=> '檢視完整的會員列表',
 	'MERGE'	=> '合併',
-	'MERGE_POSTS'	=> '合併文章',
+	'MERGE_POSTS'			=> '移動文章',
 	'MERGE_TOPIC'	=> '合併主題',
 	'MESSAGE'	=> '內容',
 	'MESSAGES'	=> '內容',
@@ -346,8 +351,8 @@ $lang = array_merge($lang, array(
 	'NEW_MESSAGES'	=> '新訊息',
 	'NEW_PM'	=> '<strong>%d</strong> 個新訊息',
 	'NEW_PMS'	=> '<strong>%d</strong> 個新訊息',
-	'NEW_POST'	=> '有新文章',
-	'NEW_POSTS'	=> '有新文章',
+	'NEW_POST'               => '有新文章',   // 不再使用
+	'NEW_POSTS'               => '有新文章',   // 不再使用
 	'NEXT'	=> '下一頁',
 	'NEXT_STEP'	=> '下一步',
 	'NEVER'	=> '從未',
@@ -380,12 +385,13 @@ $lang = array_merge($lang, array(
 	'NO_MODERATORS'	=> '沒有版主。',
 	'NO_NEW_MESSAGES'	=> '沒有新的訊息',
 	'NO_NEW_PM'	=> '<strong>0</strong> 個新訊息',
-	'NO_NEW_POSTS'	=> '無新文章',
+	'NO_NEW_POSTS'            => '無新文章',   // 不再使用
 	'NO_ONLINE_USERS'	=> '沒有註冊會員',
 	'NO_POSTS'	=> '沒有文章',
 	'NO_POSTS_TIME_FRAME'	=> '在選定的時段中這個主題沒有文章存在。',
 	'NO_FEED_ENABLED'			=> '在這個論壇的消息來源是不可用的。',
 	'NO_FEED'					=> '所需求的消息來源是不可用的。',
+	'NO_STYLE_DATA'				=> '無法得到風格的資料',
 	'NO_SUBJECT'	=> '沒有輸入標題',
 	'NO_SUCH_SEARCH_MODULE'	=> '指定的搜尋模組不存在。',
 	'NO_SUPPORTED_AUTH_METHODS'	=> '沒有可支援的認證方式。',
@@ -394,6 +400,7 @@ $lang = array_merge($lang, array(
 	'NO_TOPICS'	=> '這個版面還沒有主題或文章。',
 	'NO_TOPICS_TIME_FRAME'	=> '在選定的時段中這個版面沒有主題存在。',
 	'NO_UNREAD_PM'	=> '<strong>0</strong> 個未讀訊息',
+       'NO_UNREAD_POSTS'         => '沒有未閱讀文章',
 	'NO_UPLOAD_FORM_FOUND'	=> '上傳已經開始，但是沒有有效的上傳檔案表單。',
 	'NO_USER'	=> '該會員不存在。',
 	'NO_USERS'	=> '該會員不存在。',
@@ -420,6 +427,7 @@ $lang = array_merge($lang, array(
 	'PIXEL'					=> '像素',
 	'PLAY_QUICKTIME_FILE'	=> '播放 Quicktime 檔案',
 	'PM'					=> 'PM',
+	'PM_REPORTED'         => '點選以查看檢舉',
 	'POSTING_MESSAGE'	=> '發表訊息於 %s',
 	'POSTING_PRIVATE_MESSAGE'	=> '編寫私人訊息',
 	'POST'	=> '文章',
@@ -444,6 +452,7 @@ $lang = array_merge($lang, array(
 	'POST_TIME'	=> '發表時間 ',
 	'POST_TOPIC'	=> '發表新主題',
 	'POST_UNAPPROVED'	=> '這篇文章正在等待審核',
+	'POWERED_BY'			=> 'Powered by %s',
 	'PREVIEW'	=> '預覽',
 	'PREVIOUS'	=> '上一頁',
 	'PREVIOUS_STEP'	=> '上一步',
@@ -453,6 +462,7 @@ $lang = array_merge($lang, array(
 	'PRIVATE_MESSAGING'	=> '私人訊息',
 	'PROFILE'	=> '會員控制台 (UCP)',
 
+	'RANK'						=> '等級',
 	'READING_FORUM'	=> '正在檢視 %s 版面的主題',
 	'READING_GLOBAL_ANNOUNCE'	=> '檢視全域公告',
 	'READING_LINK'	=> '下面的版面連結 %s',
@@ -526,6 +536,7 @@ $lang = array_merge($lang, array(
 	'SEARCH_TOPIC'	=> '搜尋這個主題...',
 	'SEARCH_UNANSWERED'	=> '檢視沒有回覆的主題',
 	'SEARCH_UNREAD'				=> '檢視沒有閱讀的文章',
+	'SEARCH_USER_POSTS'			=> '搜尋會員的文章',
 	'SECONDS'	=> '秒',
 	'SELECT'	=> '選擇',
 	'SELECT_ALL_CODE'	=> '選擇全部',
@@ -559,10 +570,15 @@ $lang = array_merge($lang, array(
 	'SUBJECT'	=> '主題',
 	'SUBMIT'	=> '送出',
 
+	'TB'				=> 'TB',
 	'TERMS_USE'	=> '使用條款',
 	'TEST_CONNECTION'	=> '連結測試',
 	'THE_TEAM'	=> '管理團隊',
+	'TIB'				=> 'TiB',
 	'TIME'	=> '時間',
+	
+	'TOO_LARGE'                  => '您輸入的值太大。',
+	'TOO_LARGE_MAX_RECIPIENTS'      => '這個 <strong>每個私人訊息所允許的最大收件人數</strong> 設定，您輸入的值太大。',
 
 	'TOO_LONG'						=> '您輸入的數值太長。',
 
@@ -605,6 +621,9 @@ $lang = array_merge($lang, array(
 	'TOO_SHORT_EMAIL_CONFIRM'	=> '您輸入的確認 e-mail 位址太短了。',
 	'TOO_SHORT_WEBSITE'	=> '您輸入的網站位址太短了。',
 	'TOO_SHORT_YIM'	=> '您輸入的 Yahoo！ Messenger 會員名稱太短了。',
+	
+	'TOO_SMALL'                  => '您輸入的值太小。',
+	'TOO_SMALL_MAX_RECIPIENTS'      => '這個 <strong>每個私人訊息所允許的最大收件人數</strong> 設定，您輸入的值太小。',
 
 	'TOPIC'	=> '主題',
 	'TOPICS'	=> '主題',
@@ -639,6 +658,12 @@ $lang = array_merge($lang, array(
 	'UNREAD_MESSAGES'	=> '未讀訊息',
 	'UNREAD_PM'	=> '<strong>%d</strong> 個未讀訊息',
 	'UNREAD_PMS'	=> '<strong>%d</strong> 個未讀訊息',
+	'UNREAD_POST'         => '未閱讀文章',
+	'UNREAD_POSTS'         => '未閱讀文章',
+	'UNWATCH_FORUM_CONFIRM'		=> '您確定要取消訂閱這個版面嗎？',
+	'UNWATCH_FORUM_DETAILED'	=> '您確定要取消訂閱「%s」版面嗎？',
+	'UNWATCH_TOPIC_CONFIRM'		=> '您確定要取消訂閱這個主題嗎？',
+	'UNWATCH_TOPIC_DETAILED'	=> '您確定要取消訂閱「%s」主題嗎？',
 	'UNWATCHED_FORUMS'	=> '您將不再訂閱這些選取的版面。',
 	'UNWATCHED_TOPICS'	=> '您將不再訂閱這些選取的主題。',
 	'UNWATCHED_FORUMS_TOPICS'	=> '您將不再訂閱這些選取的文章。',
@@ -687,11 +712,16 @@ $lang = array_merge($lang, array(
 
 	'WARNINGS'	=> '警告',
 	'WARN_USER'	=> '警告會員',
+	'WATCH_FORUM_CONFIRM'	=> '您確定要訂閱這個版面嗎？',
+	'WATCH_FORUM_DETAILED'	=> '您確定要訂閱「%s」版面嗎？',
+	'WATCH_TOPIC_CONFIRM'	=> '您確定要訂閱這個主題嗎？',
+	'WATCH_TOPIC_DETAILED'	=> '您確定要訂閱「%s」主題嗎？',
 	'WELCOME_SUBJECT'	=> '歡迎來到 %s 討論區',
 	'WEBSITE'	=> '網站',
 	'WHOIS'				=> 'Whois',
 	'WHO_IS_ONLINE'	=> '誰在線上',
 	'WRONG_PASSWORD'	=> '您輸入了錯誤的密碼。',
+	'WRONG_DATA_COLOUR'			=> '您輸入的顏色值是無效的。',
 
 	'WRONG_DATA_ICQ'	=> '您輸入的數字不是一個有效的 ICQ 號碼。',
 	'WRONG_DATA_JABBER'	=> '您輸入的名字不是一個有效的 Jabber 帳號。',

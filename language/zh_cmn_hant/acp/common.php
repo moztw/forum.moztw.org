@@ -4,7 +4,7 @@
 * acp_common [正體中文]
 *
 * @package language
-* @version $Id: common.php 10458 2010-01-26 15:26:07Z jelly_doughnut $
+* @version $Id$
 * @copyright (c) 2001 - 2007 phpBB TW Group (動機不明, 心靈捕手)
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
@@ -126,7 +126,7 @@ $lang = array_merge($lang, array(
 	'ACP_MODULE_MANAGEMENT'		=> '模組管理',
 	'ACP_MOD_LOGS'				=> '版主記錄',
 	'ACP_MOD_ROLES'				=> '版主角色',
-	
+
 	'ACP_NO_ITEMS'				=> '還沒有細目。',
 
 	'ACP_ORPHAN_ATTACHMENTS'	=> '幽靈的附加檔案',
@@ -190,7 +190,7 @@ $lang = array_merge($lang, array(
 	'ACP_USER_SIG'					=> '簽名檔',
 	'ACP_USER_WARNINGS'				=> '警告',
 
-	'ACP_VC_SETTINGS'					=> 'CAPTCHA 模組設定',
+       'ACP_VC_SETTINGS'               => '廣告機器人的反制',
 	'ACP_VC_CAPTCHA_DISPLAY'			=> 'CAPTCHA 圖片預覽',
 	'ACP_VERSION_CHECK'					=> '檢查更新',
 	'ACP_VIEW_ADMIN_PERMISSIONS'		=> '檢視管理員權限',
@@ -255,7 +255,7 @@ $lang = array_merge($lang, array(
 	'MOVE_UP'				=> '往上移動',
 
 	'NOTIFY'				=> '通知',
-	'NO_ADMIN'				=> '您沒有權限可以進入管理員控制台。',
+	'NO_ADMIN'				=> '您沒有權限可以管理這個論壇。',
 	'NO_EMAILS_DEFINED'		=> '沒有找到有效的 e-mail 位址。',
 	'NO_PASSWORD_SUPPLIED'	=> '要進入管理員控制台，您需要輸入您的密碼。',	
 
@@ -267,7 +267,6 @@ $lang = array_merge($lang, array(
 	'PARSE_URLS'						=> '可用超連結',
 	'PERMISSIONS_TRANSFERRED'			=> '權限轉移',
 	'PERMISSIONS_TRANSFERRED_EXPLAIN'	=> '您目前擁有來自 %1$s 的權限。您可以使用該會員的權限瀏覽討論區但是無法進入管理員控制台因為管理員的權限無法被轉移。您隨時都可以 <a href="%2$s"><strong>恢復您的權限設定</strong></a>。',
-
 	'PROCEED_TO_ACP'					=> '%s進入 ACP%s',
 
 	'REMIND'							=> '提醒',
@@ -281,6 +280,7 @@ $lang = array_merge($lang, array(
 	'SETTING_TOO_BIG'		=> '您所提供的值「%1$s」太高。允許最大的值是 %2$d。',
 	'SETTING_TOO_LONG'		=> '您所提供的值「%1$s」太長。允許最大的長度是 %2$d。',
 	'SETTING_TOO_SHORT'		=> '您所提供的值「%1$s」太短。允許最小的長度是 %2$d。',
+
 	'SHOW_ALL_OPERATIONS'	=> '顯示所有的操作',
 
 	'UCP'					=> '會員控制台 (UCP)',
@@ -292,7 +292,7 @@ $lang = array_merge($lang, array(
 
 // PHP info
 $lang = array_merge($lang, array(
-	'ACP_PHP_INFO_EXPLAIN'	=> '這個頁面列出了這個伺服器上所安裝的 PHP 版本資訊。它包括了已裝載模組的細節，可用的變數和預設的設定。在診斷問題時這些資訊可能會有用。請注意！某些主機商可能會因為安全理由限制顯示某些資訊。建議您不要洩露這頁的任何細節，除非在支援論壇中被 <a href="http://www.phpbb.com/about/">官方團隊成員</a> 要求提供。',
+	'ACP_PHP_INFO_EXPLAIN'	=> '這個頁面列出了這個伺服器上所安裝的 PHP 版本資訊。它包括了已裝載模組的細節，可用的變數和預設的設定。在診斷問題時這些資訊可能會有用。請注意！某些主機商可能會因為安全理由限制顯示某些資訊。建議您不要洩露這頁的任何細節，除非在支援論壇中被 <a href="https://www.phpbb.com/about/team/">官方團隊成員</a> 要求提供。',
 
 	'NO_PHPINFO_AVAILABLE'	=> '關於您的 PHP 組態的資訊無法認定，Phpinfo() 因為安全理由已經被停用。',
 ));
@@ -326,6 +326,16 @@ $lang = array_merge($lang, array(
 
 	'DATABASE_SERVER_INFO'	=> '資料庫伺服器',
 	'DATABASE_SIZE'			=> '資料庫大小',
+
+	// 與 mbstring 相關的環境設定之檢查
+	'ERROR_MBSTRING_FUNC_OVERLOAD'					=> '函數重載的設定不當',
+	'ERROR_MBSTRING_FUNC_OVERLOAD_EXPLAIN'			=> '<var>mbstring.func_overload</var> 必須設定為 0 或 4。您可以在 <samp>PHP 資訊</samp> 頁檢查目前的設定值。',
+	'ERROR_MBSTRING_ENCODING_TRANSLATION'			=> '透明的字元編碼之設定不當',
+	'ERROR_MBSTRING_ENCODING_TRANSLATION_EXPLAIN'	=> '<var>mbstring.encoding_translation</var> 必須設定為 0。您可以在 <samp>PHP 資訊</samp> 頁檢查目前的設定值。',
+	'ERROR_MBSTRING_HTTP_INPUT'						=> 'HTTP 輸入的字元轉換之設定不當',
+	'ERROR_MBSTRING_HTTP_INPUT_EXPLAIN'				=> '<var>mbstring.http_input</var> 必須設定為 <samp>pass</samp>. 您可以在 <samp>PHP 資訊</samp> 頁檢查目前的設定值。',
+	'ERROR_MBSTRING_HTTP_OUTPUT'					=> 'HTTP 輸出的字元轉換之設定不當',
+	'ERROR_MBSTRING_HTTP_OUTPUT_EXPLAIN'			=> '<var>mbstring.http_output</var> 必須設定為 <samp>pass</samp>. 您可以在 <samp>PHP 資訊</samp> 頁檢查目前的設定值。',
 
 	'FILES_PER_DAY'		=> '每天的附加檔案',
 	'FORUM_STATS'		=> '討論區統計',
@@ -381,7 +391,7 @@ $lang = array_merge($lang, array(
 	'VIEW_INACTIVE_USERS'	=> '檢視未啟用的會員',
 
 	'WELCOME_PHPBB'			=> '歡迎光臨 phpBB',
-	'WRITABLE_CONFIG'		=> '您目前的組態設定檔 (config.php) 是可以寫入的. 我們強烈建議您改變權限為 640 或至少是 644 (例如：<a href="http://en.wikipedia.org/wiki/Chmod" rel="external">chmod</a> 640 config.php)。',
+	'WRITABLE_CONFIG'		=> '您目前的組態設定檔 (config.php) 是可以寫入的。我們強烈建議您改變權限為 640 或至少是 644 (例如：<a href="http://en.wikipedia.org/wiki/Chmod" rel="external">chmod</a> 640 config.php)。',
 ));
 
 // Inactive Users
@@ -395,7 +405,7 @@ $lang = array_merge($lang, array(
 	'INACTIVE_REASON_UNKNOWN'		=> '不知道',
 	'INACTIVE_USERS'				=> '未啟用的會員',
 	'INACTIVE_USERS_EXPLAIN'		=> '這是已經註冊但是尚未啟用帳號的會員列表。如果您希望的話，那麼您可以啟用、刪除或提醒 (發送 e-mail) 這些會員。',
-	'INACTIVE_USERS_EXPLAIN_INDEX'	=> '這是最近十個已經註冊但是尚未啟用帳號的會員列表。您可以從適當的選單項目或下面的「檢視未啟用的會員」連結檢視完整列表，從那裡您可以啟用、刪除或提醒 (發送 e-mail) 這些會員。',
+	'INACTIVE_USERS_EXPLAIN_INDEX'	=> '這是最近十個已經註冊但是尚未啟用帳號的會員列表。帳號是無效的，可能是因為會員註冊後需要啟用，而這些帳號尚未啟用，或者是因為這些帳號已被停用。您可以從適當的選單項目或下面的「檢視未啟用的會員」連結檢視完整列表，從那裡您可以啟用、刪除或提醒 (發送 e-mail) 這些會員。',
 
 	'NO_INACTIVE_USERS'	=> '沒有未啟用的會員',
 
@@ -503,13 +513,13 @@ $lang = array_merge($lang, array(
 	'LOG_CONFIG_SERVER'			=> '<strong>已更改伺服器設定</strong>',
 	'LOG_CONFIG_SETTINGS'		=> '<strong>已更改討論區設定</strong>',
 	'LOG_CONFIG_SIGNATURE'		=> '<strong>已更改簽名檔設定</strong>',
-	'LOG_CONFIG_VISUAL'			=> '<strong>已更改確認代碼設定</strong>',
+       'LOG_CONFIG_VISUAL'         => '<strong>已更改反廣告機器人的設定</strong>',
 
 	'LOG_APPROVE_TOPIC'			=> '<strong>已核准主題</strong><br />» %s',
 	'LOG_BUMP_TOPIC'			=> '<strong>已推文主題</strong><br />» %s',
-	'LOG_DELETE_POST'			=> '<strong>已刪除文章</strong><br />» %s',
+	'LOG_DELETE_POST'			=> '<strong>已刪除文章「%1$s」，其作者是</strong><br />» %2$s',
 	'LOG_DELETE_SHADOW_TOPIC'	=> '<strong>在舊的版面上刪除已移動的主題</strong><br /> %s',
-	'LOG_DELETE_TOPIC'			=> '<strong>已刪除主題</strong><br /> %s',
+	'LOG_DELETE_TOPIC'			=> '<strong>已刪除主題「%1$s」，其作者是</strong><br />» %2$s',
 	'LOG_FORK'					=> '<strong>已複製主題</strong><br /> 從 %s',
 	'LOG_LOCK'					=> '<strong>已鎖定主題</strong><br /> %s',
 	'LOG_LOCK_POST'				=> '<strong>已鎖定文章</strong><br /> %s',
@@ -549,7 +559,7 @@ $lang = array_merge($lang, array(
 	'LOG_FORUM_ADD'							=> '<strong>已建立新的版面</strong><br />» %s',
 	'LOG_FORUM_COPIED_PERMISSIONS'			=> '<strong>已複製版面權限</strong> 自 %1$s<br />» %2$s',
 	'LOG_FORUM_DEL_FORUM'					=> '<strong>已刪除版面</strong><br />» %s',
-	'LOG_FORUM_DEL_FORUMS'					=> '<strong>已刪除版面和它的子版面/strong><br />» %s',
+	'LOG_FORUM_DEL_FORUMS'					=> '<strong>已刪除版面和它的子版面</strong><br />» %s',
 	'LOG_FORUM_DEL_MOVE_FORUMS'				=> '<strong>已刪除版面和已移動子版面</strong> 到 %1$s<br />» %2$s',
 	'LOG_FORUM_DEL_MOVE_POSTS'				=> '<strong>已刪除版面和已移動文章 </strong> 到 %1$s<br />» %2$s',
 	'LOG_FORUM_DEL_MOVE_POSTS_FORUMS'		=> '<strong>已刪除版面和它的子版面，已移動文章</strong> 到 %1$s<br />» %2$s',

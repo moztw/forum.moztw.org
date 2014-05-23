@@ -4,7 +4,7 @@
 * install [正體中文]
 *
 * @package language
-* @version $Id: install.php 10101 2009-09-04 14:49:41Z acydburn $
+* @version $Id$
 * @copyright (c) 2001 - 2007 phpBB TW Group (yoshika, 心靈捕手, 動機不明)
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
@@ -52,6 +52,7 @@ $lang = array_merge($lang, array(
 	'BLANK_PREFIX_FOUND'			=> '對資料庫的掃瞄顯示存在可用的無首碼表單。',
 	'BOARD_NOT_INSTALLED'			=> '沒有發現已安裝的 phpBB',
 	'BOARD_NOT_INSTALLED_EXPLAIN'	=> '為了進行轉換功能，您必須預先安裝一個全新的 phpBB3。請進行[<a href="%s">全新安裝</a>]。',
+	'BACKUP_NOTICE'					=> '進行更新前請備份您的論壇，以防止更新過程中發生任何的問題。',
 
 	'CATEGORY'					=> '分區',
 	'CACHE_STORE'				=> '快取類型',
@@ -79,7 +80,7 @@ $lang = array_merge($lang, array(
 	'CONTINUE_OLD_CONVERSION'	=> '繼續進行以前的轉換',
 	'CONVERT'					=> '轉換',
 	'CONVERT_COMPLETE'			=> '轉換完成',
-	'CONVERT_COMPLETE_EXPLAIN'	=> '您已經將您的討論區成功轉換為 phpBB 3.0.x，您現在可以登入以及 <a href="../">使用您的討論區</a>。請在刪除 /install/ 資料夾以啟用您的討論區前，確認所有的設定都已經被正確地轉換。請記得 phpBB 的線上使用說明位於 <a href="http：//www.phpbb.com/support/documentation/3.0/">Documentation (使用說明文件)</a> 和 <a href="http://www.phpbb.com/phpBB/viewforum.php?f=46">3.0.x Support Forum（技術支援版面）</a>。',
+	'CONVERT_COMPLETE_EXPLAIN'	=> '您已經將您的討論區成功轉換為 phpBB 3.0.x，您現在可以登入以及 <a href="../">使用您的討論區</a>。請在刪除 /install/ 資料夾以啟用您的討論區前，確認所有的設定都已經被正確地轉換。請記得 phpBB 的線上使用說明位於 <a href="https://www.phpbb.com/support/documentation/3.0/">Documentation (使用說明文件)</a> 和 <a href="https://www.phpbb.com/phpBB/viewforum.php?f=46">3.0.x Support Forum（技術支援版面）</a>。',
 	'CONVERT_INTRO'				=> '歡迎使用 phpBB 轉換架構',
 	'CONVERT_INTRO_BODY'		=> '這裡您可以從其它（已安裝）的討論區導入資料，下表列出的是所有可用的轉換模組。如果其中沒有您想要的轉換模組，請訪問我們的網站，那裡可能會提供更多的轉換模組下載。',
 	'CONVERT_NEW_CONVERSION'	=> '新的轉換',
@@ -128,7 +129,7 @@ $lang = array_merge($lang, array(
 	'DB_ERR_QUERY_FIRST_TABLE'	=> '執行 <var>query_first</var> 時發生錯誤：%s (「%s」)。',
 	'DB_ERR_SELECT'				=> '執行 <code>SELECT</code> 語句時發生錯誤。',
 	'DB_HOST'					=> '資料庫伺服器主機名稱或 DSN',
-	'DB_HOST_EXPLAIN'			=> 'DSN 意思是 Data Source Name，它只與安裝 ODBC 有關。',
+	'DB_HOST_EXPLAIN'			=> 'DSN 意思是 Data Source Name，它只與安裝 ODBC 有關。在 PostgreSQL，經由 UNIX 網域插口，使用 localhost 以連接本地伺服器，以及經由 TCP，使用 127.0.0.1 以連接之。對於 SQLite，請輸入到您資料庫檔案的完整路徑。',
 	'DB_NAME'					=> '資料庫名稱',
 	'DB_PASSWORD'				=> '資料庫管理員密碼',
 	'DB_PORT'					=> '資料庫伺服器連接埠',
@@ -147,10 +148,11 @@ $lang = array_merge($lang, array(
 	'DLL_MBSTRING'				=> '多位元組字元支援',
 	'DLL_MSSQL'					=> 'MSSQL Server 2000+',
 	'DLL_MSSQL_ODBC'			=> 'MSSQL Server 2000+ via ODBC',
+	'DLL_MSSQLNATIVE'			=> 'MSSQL Server 2005+ [ Native ]',
 	'DLL_MYSQL'					=> 'MySQL',
 	'DLL_MYSQLI'				=> 'MySQL with MySQLi Extension',
 	'DLL_ORACLE'				=> 'Oracle',
-	'DLL_POSTGRES'				=> 'PostgreSQL 7.x/8.x',
+	'DLL_POSTGRES'				=> 'PostgreSQL',
 	'DLL_SQLITE'				=> 'SQLite',
 	'DLL_XML'					=> 'XML 支援 [ Jabber ]',
 	'DLL_ZLIB'					=> 'zlib 支援 [ 壓縮檔案：.gz .tar .gz .zip ]',
@@ -192,7 +194,7 @@ $lang = array_merge($lang, array(
 		<h2>轉換一個已經存在的討論區到 phpBB3</h2>
 		<p>phpBB 轉換架構支援從 phpBB 2.0.x 和其他討論區軟體到 phpBB3 的轉換。如果您有一個舊的討論區需要轉換，請 <a href="%2$s">運行轉換程式</a>。</p>
 		<h2>使用您的 phpBB3！</h2>
-		<p>點選下面的連結，將帶您到管理員控制台（ACP）中，提交統計資料到 phpBB 的表格。如果您幫助我們寄送那資訊，那麼我們將不勝感激。之後，您應該花些時間去測試一些對您有用的選項。請記得 phpBB 的線上使用說明位於 <a href="http://www.phpbb.com/support/documentation/3.0/">Documentation（使用說明文件）</a> 和 <a href="http://www.phpbb.com/community/viewforum.php?f=46">Support Forum（技術支援版面）</a>。</p><p><strong>請在使用您的討論區前刪除、移動或重新命名 /install/ 資料夾。如果這個資料夾存在，那麼只有管理員控制台（ACP）才允許使用。</strong>',
+		<p>點選下面的連結，將帶您到管理員控制台（ACP）中，提交統計資料到 phpBB 的表格。如果您幫助我們寄送那資訊，那麼我們將不勝感激。之後，您應該花些時間去測試一些對您有用的選項。請記得 phpBB 的線上使用說明位於 <a href="https://www.phpbb.com/support/documentation/3.0/">Documentation（使用說明文件）</a> 和 <a href="https://www.phpbb.com/community/viewforum.php?f=46">Support Forum（技術支援版面）</a>。</p><p><strong>請在使用您的討論區前刪除、移動或重新命名 /install/ 資料夾。如果這個資料夾存在，那麼只有管理員控制台（ACP）才允許使用。</strong>',
 	'INSTALL_INTRO'				=> '歡迎安裝！',
 
 	'INSTALL_INTRO_BODY'		=> '使用這個選項，應該可以在您的伺服器上安裝 phpBB。</p><p>為了繼續安裝，您需要知道您的資料庫設定。如果您不清楚這些，請聯絡您的網站空間提供者。沒有這些訊息安裝將不能繼續。您需要：</p>
@@ -209,11 +211,12 @@ $lang = array_merge($lang, array(
 
 	<p>phpBB3 支援如下的資料庫：</p>
 	<ul>
-		<li>MySQL 3.23 或更高 (支援MySQLi)</li>
+		<li>MySQL 3.23 或更高 (支援 MySQLi)</li>
 		<li>PostgreSQL 7.3+</li>
 		<li>SQLite 2.8.2+</li>
 		<li>Firebird 2.1+</li>
 		<li>MS SQL Server 2000 或更高（直接訪問或通過 ODBC）</li>
+		<li>MS SQL Server 2005 或更高 (native)</li>
 		<li>Oracle</li>
 	</ul>
 
@@ -230,6 +233,7 @@ $lang = array_merge($lang, array(
 	'INST_ERR'					=> '安裝過程出錯',
 	'INST_ERR_DB_CONNECT'		=> '連接資料庫失敗，錯誤訊息如下',
 	'INST_ERR_DB_FORUM_PATH'	=> '指定的資料庫檔案位於討論區資料夾內，您應該把它放在一個無法通過網路訪問的位置。',
+	'INST_ERR_DB_INVALID_PREFIX'=> '您輸入的字首是無效的。它必須以英文字母開始，而且只能包含英文字母、數字和底線。',
 	'INST_ERR_DB_NO_ERROR'		=> '沒有得到相關的錯誤訊息',
 	'INST_ERR_DB_NO_MYSQLI'		=> '伺服器內安裝的 MySQL 版本與您選擇的「MySQL with MySQLi Extension」選項不相容，請嘗試「MySQL」選項。',
 	'INST_ERR_DB_NO_SQLITE'		=> '您安裝的 SQLite 版本太舊，請升級到至少 2.8.2 版。',
@@ -273,7 +277,7 @@ $lang = array_merge($lang, array(
 	'MAKE_FOLDER_WRITABLE'		=> '請確認此資料夾存在並且是可以被寫入的，然後再試試：<br />»<strong>%s</strong>。',
 	'MAKE_FOLDERS_WRITABLE'		=> '請確認此資料夾存在並且是可以被寫入的，然後再試試：<br />»<strong>%s</strong>。',
 
-	'MYSQL_SCHEMA_UPDATE_REQUIRED'	=> '您 phpBB 的 MySQL 資料庫結構是過期的。phpBB 已偵測到的版本是 MySQL 3.x/4.x，但是伺服器運行的版本是 MySQL %2$s.<br /><strong>在您執行更新之前，您需要升級結構。</strong><br /><br />請參考 <a href="http://www.phpbb.com/kb/article/doesnt-have-a-default-value-errors/">知識庫關於升級 MySQL 結構的文章</a>。如果您遭遇問題，那麼請到 <a href="http://www.phpbb.com/community/viewforum.php?f=46">我們的支援論壇</a>。',
+	'MYSQL_SCHEMA_UPDATE_REQUIRED'	=> '您 phpBB 的 MySQL 資料庫結構是過期的。phpBB 已偵測到的版本是 MySQL 3.x/4.x，但是伺服器運行的版本是 MySQL %2$s.<br /><strong>在您執行更新之前，您需要升級結構。</strong><br /><br />請參考 <a href="https://www.phpbb.com/kb/article/doesnt-have-a-default-value-errors/">知識庫關於升級 MySQL 結構的文章</a>。如果您遭遇問題，那麼請到 <a href="https://www.phpbb.com/community/viewforum.php?f=46">我們的支援論壇</a>。',
 
 	'NAMING_CONFLICT'			=> '命名衝突：%s 與 %s 都是別名<br /><br />%s',
 	'NEXT_STEP'					=> '繼續進行下一步',
@@ -284,7 +288,7 @@ $lang = array_merge($lang, array(
 	'NO_LOCATION'				=> '無法確定位置。如果您確定 Imagemagick 已經安裝，請於討論區安裝完成之後，在管理員控制台中指定它的位置。',
 	'NO_TABLES_FOUND'			=> '沒有找到任何表格。',
 
-	'OVERVIEW_BODY'				=> '歡迎使用 phpBB3！<br /><br />phpBB™ 是目前世界上最廣泛被使用的自由軟體討論區程式。phpBB3 是自西元 2000 年以來所開發的最新產品。與之前的版本相比，phpBB3 具有更豐富的未來性，更友善的操作界面，並擁有 phpBB Team 的完整技術支援。phpBB3 大幅提升了 phpBB2 受人歡迎的效能，而且更增加了在之前的版本沒有但普遍需要的功能。我們深切盼望 phpBB3 能夠超過您的期望。<br /><br />這個安裝系統將會帶領您正確安裝 phpBB3，或是升級到 phpBB3 最新的版本，包含完整的轉換來自不同的討論區系統資料（例如 phpBB2）。關於更多的資訊，我們建議您瀏覽 <a href="../docs/INSTALL.html">安裝手冊</a>。<br /><br />了解關於 phpBB3 的授權或是獲悉有關目前的支援程度與我們對這項產品的立場，請選擇左方功能列內各別選項。請選擇上方的選單繼續進行安裝。',
+	'OVERVIEW_BODY'				=> '歡迎使用 phpBB3！<br /><br />phpBB® 是目前世界上最廣泛被使用的自由軟體討論區程式。phpBB3 是自西元 2000 年以來所開發的最新產品。與之前的版本相比，phpBB3 具有更豐富的未來性，更友善的操作界面，並擁有 phpBB Team 的完整技術支援。phpBB3 大幅提升了 phpBB2 受人歡迎的效能，而且更增加了在之前的版本沒有但普遍需要的功能。我們深切盼望 phpBB3 能夠超過您的期望。<br /><br />這個安裝系統將會帶領您正確安裝 phpBB3，或是升級到 phpBB3 最新的版本，包含完整的轉換來自不同的討論區系統資料（例如 phpBB2）。關於更多的資訊，我們建議您瀏覽 <a href="../docs/INSTALL.html">安裝手冊</a>。<br /><br />了解關於 phpBB3 的授權或是獲悉有關目前的支援程度與我們對這項產品的立場，請選擇左方功能列內各別選項。請選擇上方的選單繼續進行安裝。',
 
 	'PCRE_UTF_SUPPORT'				=> 'PCRE UTF-8 支援',
 	'PCRE_UTF_SUPPORT_EXPLAIN'		=> '如果 PHP 的 PCRE 延伸功能不支援 UTF-8，phpBB 將 <strong>無法</strong> 運行。',
@@ -341,7 +345,7 @@ $lang = array_merge($lang, array(
 	'SUB_LICENSE'				=> '授權',
 	'SUB_SUPPORT'				=> '支援',
 	'SUCCESSFUL_CONNECT'		=> '連接成功',
-	'SUPPORT_BODY'				=> '目前所釋出的穩定版本將提供完全且免費的支援。其中包括：</p><ul><li>安裝</li><li>設定</li><li>技術的問題</li><li>在軟體中可能的 bugs 之相關問題</li><li>從候選正式版本 (RC) 到最新的穩定版本的更新</li><li>從 phpBB 2.0.x 到 phpBB3 的轉換</li><li>從其他的討論區軟體到 phpBB3 的轉換 (請參訪 <a href="http://www.phpbb.com/community/viewforum.php?f=65">Convertors Forum</a>)。</li></ul><p>我們鼓勵仍在運行 phpBB3 測試版的使用者以最新的版本來取代他們的安裝。</p><h2>外掛 / 風格</h2><p>外掛的相關問題，請您發表在 <a href="http://www.phpbb.com/community/viewforum.php?f=81">Modifications Forum</a> 合適的版面。<br />風格、樣版、圖檔組的相關問題，請您發表在 <a href="http://www.phpbb.com/community/viewforum.php?f=80">Styles Forum</a> 合適的版面。<br /><br />如果您的問題關係到某個特別的檔案，那麼請直接將它附加在發表的主題內。</p><h2>獲得支援</h2><p><a href="http://www.phpbb.com/community/viewtopic.php?f=14&amp;t=571070">The phpBB Welcome Package (phpBB 歡迎包)</a><br /><a href="http://www.phpbb.com/support/">Support Section（支援部門）</a><br /><a href="http://www.phpbb.com/support/documentation/3.0/quickstart/">Quick Start Guide（快速啟動指導）</a><br /><br />要確保您隨時可以獲取最新的發佈與新聞，為何不 <a href="http://www.phpbb.com/support/">訂閱我們的電子報</a> 呢？<br /><br />',
+	'SUPPORT_BODY'				=> '目前所釋出的穩定版本將提供完全且免費的支援。其中包括：</p><ul><li>安裝</li><li>設定</li><li>技術的問題</li><li>在軟體中可能的 bugs 之相關問題</li><li>從候選正式版本 (RC) 到最新的穩定版本的更新</li><li>從 phpBB 2.0.x 到 phpBB3 的轉換</li><li>從其他的討論區軟體到 phpBB3 的轉換 (請參訪 <a href="https://www.phpbb.com/community/viewforum.php?f=65">Convertors Forum</a>)。</li></ul><p>我們鼓勵仍在運行 phpBB3 測試版的使用者以最新的版本來取代他們的安裝。</p><h2>外掛 / 風格</h2><p>外掛的相關問題，請您發表在 <a href="https://www.phpbb.com/community/viewforum.php?f=81">Modifications Forum</a> 合適的版面。<br />風格、樣版、圖檔組的相關問題，請您發表在 <a href="https://www.phpbb.com/community/viewforum.php?f=80">Styles Forum</a> 合適的版面。<br /><br />如果您的問題關係到某個特別的檔案，那麼請直接將它附加在發表的主題內。</p><h2>獲得支援</h2><p><a href="https://www.phpbb.com/community/viewtopic.php?f=14&amp;t=571070">The phpBB Welcome Package (phpBB 歡迎包)</a><br /><a href="https://www.phpbb.com/support/">Support Section（支援部門）</a><br /><a href="https://www.phpbb.com/support/documentation/3.0/quickstart/">Quick Start Guide（快速啟動指導）</a><br /><br />要確保您隨時可以獲取最新的發佈與新聞，為何不 <a href="https://www.phpbb.com/support/">訂閱我們的電子報</a> 呢？<br /><br />',
 	'SYNC_FORUMS'				=> '開始同步版面',
 	'SYNC_POST_COUNT'			=> '正在同步文章',
 	'SYNC_POST_COUNT_ID'		=> '正在同步<var>序號</var>為 %1$s 到 %2$s 的文章。',
@@ -350,6 +354,7 @@ $lang = array_merge($lang, array(
 
 	'TABLES_MISSING'			=> '無法找到這些資料表<br />» <strong>%s</strong>。',
 	'TABLE_PREFIX'				=> '為資料庫中的資料表名稱加入字首',
+	'TABLE_PREFIX_EXPLAIN'		=> '字首必須以英文字母開始，而且只能包含英文字母、數字和底線。',
 	'TABLE_PREFIX_SAME'			=> '資料表字首需要與轉換之前所使用的相同。<br />» 之前所使用的資料表字首是 %s。',
 	'TESTS_PASSED'				=> '檢測通過',
 	'TESTS_FAILED'				=> '檢測未通過',
@@ -463,7 +468,7 @@ $lang = array_merge($lang, array(
 	'NO_ERRORS'						=> '沒有錯誤',
 	'NO_UPDATE_FILES'				=> '不要升級以下檔案',
 	'NO_UPDATE_FILES_EXPLAIN'		=> '以下的檔案是新的或者修改過的，但是在您的安裝的資料夾中找不到。如果列表中包含了 language/ 或者 styles/ 資料夾的檔案，那麼可能您曾經修改過資料夾結構，這個升級可能無法執行完全。',
-	'NO_UPDATE_FILES_OUTDATED'		=> '沒有發現有效的更新資料夾，請確認上傳了最新的升級檔案。<br /><br />您的安裝似乎 <strong>不是</strong> 最新版本。更新的 phpBB 版本 %1$s 已經提供下載，請訪問 <a href="http://www.phpbb.com/downloads.php" rel="external">http://www.phpbb.com/downloads.php</a> 獲得正確的版本 %2$s 到版本 %3$s 的升級包。',
+	'NO_UPDATE_FILES_OUTDATED'		=> '沒有發現有效的更新資料夾，請確認上傳了最新的升級檔案。<br /><br />您的安裝似乎 <strong>不是</strong> 最新版本。更新的 phpBB 版本 %1$s 已經提供下載，請訪問 <a href="https://www.phpbb.com/downloads.php" rel="external">https://www.phpbb.com/downloads.php</a> 以獲得正確的版本 %2$s 到版本 %3$s 的升級包。',
 	'NO_UPDATE_FILES_UP_TO_DATE'	=> '您的版本已經是最新版本。沒有必要進行升級。如果您想要徹底地檢查您的檔案，請確認您上傳了正確的更新檔案。',
 	'NO_UPDATE_INFO'				=> '無法找到升級的檔案資訊。',
 	'NO_UPDATES_REQUIRED'			=> '不需要升級',
@@ -531,7 +536,7 @@ $lang = array_merge($lang, array(
 		<p>建議的方法是使用自動更新包來更新您的安裝。您也可以使用寫在 INSTALL.html 文件的方法更新。自動更新的步驟是：</p>
 
 		<ul style="margin-left: 20px; font-size: 1.1em;">
-			<li>前往 <a href="http://www.phpbb.com/downloads/" title="http://www.phpbb.com/downloads/">phpBB.com downloads page</a> 下載「Automatic Update Package (自動更新包)」壓縮檔。<br /><br /></li>
+			<li>前往 <a href="https://www.phpbb.com/downloads/" title="https://www.phpbb.com/downloads/">phpBB.com downloads page</a> 下載「Automatic Update Package (自動更新包)」壓縮檔。<br /><br /></li>
 			<li>解壓縮。<br /><br /></li>
 			<li>上傳解壓完成的檔案到您安裝 phpBB 的根目錄（即 config.php 檔案所在資料夾）。<br /><br /></li>
 		</ul>
@@ -557,6 +562,7 @@ $lang = array_merge($lang, array(
 	'UPDATING_DATA'					=> '更新資料',
 	'UPDATING_TO_LATEST_STABLE'		=> '更新資料庫至最新的穩定版本',
 	'UPDATED_VERSION'				=> '已更新的版本',
+	'UPGRADE_INSTRUCTIONS'         => '一項可用的新功能 <strong>%1$s</strong> 已發布。請仔細閱讀 <a href="%2$s" title="%2$s"><strong>發布公告</strong></a> 以瞭解其所提供者，以及如何更新。',
 	'UPLOAD_METHOD'					=> '上傳方式',
 
 	'UPDATE_DB_SUCCESS'				=> '資料庫更新完成。',
@@ -565,7 +571,7 @@ $lang = array_merge($lang, array(
 
 	'VERSION_CHECK'				=> '版本檢查',
 	'VERSION_CHECK_EXPLAIN'		=> '檢查您安裝的討論區是否是最新版本。',
-	'VERSION_NOT_UP_TO_DATE'	=> '您您安裝的討論區不是最新的，請繼續更新過程。',
+	'VERSION_NOT_UP_TO_DATE'	=> '您安裝的討論區不是最新的，請繼續更新過程。',
 	'VERSION_NOT_UP_TO_DATE_ACP'=> '您安裝的討論區不是最新的。<br />下面連結是最新版本的釋出公告，它包含更多的更新說明之資訊。',
 	'VERSION_NOT_UP_TO_DATE_TITLE'	=> '您安裝的討論區不是最新的。',
 	'VERSION_UP_TO_DATE'		=> '您安裝的討論區是最新的，雖然此時沒有可用的更新，但是您可繼續執行檔案的有效性檢查。',
@@ -583,16 +589,6 @@ $lang = array_merge($lang, array(
 	'CONFIG_SITENAME'				=> '（您的討論區名稱）',
 
 	'DEFAULT_INSTALL_POST'			=> '這是在您安裝 phpBB3 後的一篇範例文章。似乎一切事情都可正常運作。如果您喜歡，那麼您可以刪除這篇文章以及繼續設定您的論壇。在安裝的過程中，您的第一個分區和第一個版面，被指派了一個適當的版面權限設定，其包含的預設會員群組有管理員、機器人、全域版主、訪客、註冊會員、以及註冊 COPPA 會員等。如果您也選擇要刪除您的第一個分區和第一個版面，那麼不要忘記指派版面權限到所有您新建的分區以及版面。當您要新建分區以及版面時，建議重新命名您的第一個分區和第一個版面，以及複製其版面權限。祝您使用愉快！',
-
-	'EXT_GROUP_ARCHIVES'			=> '壓縮檔',
-	'EXT_GROUP_DOCUMENTS'			=> '文件檔',
-	'EXT_GROUP_DOWNLOADABLE_FILES'	=> '可下載的檔案',
-	'EXT_GROUP_FLASH_FILES'			=> 'Flash 檔案',
-	'EXT_GROUP_IMAGES'				=> '圖片檔',
-	'EXT_GROUP_PLAIN_TEXT'			=> '純文字檔',
-	'EXT_GROUP_QUICKTIME_MEDIA'		=> 'Quicktime 多媒體檔',
-	'EXT_GROUP_REAL_MEDIA'			=> 'Real Media 多媒體檔',
-	'EXT_GROUP_WINDOWS_MEDIA'		=> 'Windows Media 多媒體檔',
 
 	'FORUMS_FIRST_CATEGORY'			=> '您的第一個分區',
 	'FORUMS_TEST_FORUM_DESC'		=> '您的第一個版面描述。',

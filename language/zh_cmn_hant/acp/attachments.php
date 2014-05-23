@@ -4,7 +4,7 @@
 * acp_attachments [正體中文]
 *
 * @package language
-* @version $Id: attachments.php 8946 2008-09-26 18:32:05Z toonarmy $
+* @version $Id$
 * @copyright (c) 2001 - 2007 phpBB TW Group (心靈捕手)
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
@@ -57,7 +57,7 @@ $lang = array_merge($lang, array(
 	'ATTACH_EXT_GROUPS_URL'				=> '副檔名群組',
 	'ATTACH_ID'							=> 'ID',
 	'ATTACH_MAX_FILESIZE'				=> '檔案大小的最大值',
-	'ATTACH_MAX_FILESIZE_EXPLAIN'		=> '每個附加檔案其檔案大小的最大值，設定 0 表示沒有限制。',
+	'ATTACH_MAX_FILESIZE_EXPLAIN'		=> '每個附加檔案其檔案大小的最大值。如果設定 0，那麼可以上傳的檔案大小，將只受限於您的 PHP 設定。',
 	'ATTACH_MAX_PM_FILESIZE'			=> '在私人訊息中檔案大小的最大值',
 	'ATTACH_MAX_PM_FILESIZE_EXPLAIN'	=> '可以使用在私人訊息中的附加檔案，其每個檔案之最大容量，設定 0 表示沒有限制。',
 	'ATTACH_ORPHAN_URL'					=> '幽靈檔案',
@@ -85,7 +85,7 @@ $lang = array_merge($lang, array(
 	'DISPLAY_INLINED_EXPLAIN'		=> '如果設定為否，圖檔將顯示為一個連結。',
 	'DISPLAY_ORDER'					=> '附加檔案顯示順序',
 	'DISPLAY_ORDER_EXPLAIN'			=> '按時間顯示附加檔案順序。',
-	
+
 	'EDIT_EXTENSION_GROUP'			=> '編輯副檔名群組',
 	'EXCLUDE_ENTERED_IP'			=> '使用這個選項以排除輸入的 IP/主機。',
 	'EXCLUDE_FROM_ALLOWED_IP'		=> '從允許的 IP/主機中排除 IP',
@@ -96,6 +96,16 @@ $lang = array_merge($lang, array(
 	'EXTENSION_GROUPS'				=> '副檔名群組',
 	'EXTENSION_GROUP_DELETED'		=> '副檔名群組刪除完成。',
 	'EXTENSION_GROUP_EXIST'			=> '副檔名群組 %s 已經存在',
+
+	'EXT_GROUP_ARCHIVES'         => '壓縮檔',
+	'EXT_GROUP_DOCUMENTS'         => '文件檔',
+	'EXT_GROUP_DOWNLOADABLE_FILES'   => '可下載的檔案',
+	'EXT_GROUP_FLASH_FILES'         => 'Flash 檔案',
+	'EXT_GROUP_IMAGES'            => '圖片檔',
+	'EXT_GROUP_PLAIN_TEXT'         => '純文字檔',
+	'EXT_GROUP_QUICKTIME_MEDIA'      => 'Quicktime 多媒體檔',
+	'EXT_GROUP_REAL_MEDIA'         => 'Real Media 多媒體檔',
+	'EXT_GROUP_WINDOWS_MEDIA'      => 'Windows Media 多媒體檔',
 
 	'GO_TO_EXTENSIONS'		=> '前往副檔名管理界面',
 	'GROUP_NAME'			=> '群組名稱',

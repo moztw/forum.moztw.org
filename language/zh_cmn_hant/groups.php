@@ -4,9 +4,9 @@
 * groups [正體中文]
 *
 * @package language
-* @version $Id: groups.php 8479 2008-03-29 00:22:48Z naderman $
+* @version $Id$
 * @copyright (c) 2001 - 2007 phpBB TW Group (心靈捕手)
-* @license http://opensource.org/licenses/gpl-license.php GNU Public License 
+* @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
 */
 
@@ -43,7 +43,7 @@ $lang = array_merge($lang, array(
 	'CANNOT_JOIN_GROUP'			=> '您不能加入這個群組。您只能加入自由與開放的群組。',
 	'CANNOT_RESIGN_GROUP'		=> '您不能退出這個群組。您只能退出自由與開放的群組。',
 	'CHANGED_DEFAULT_GROUP'	=> '成功更改預設會員群組。',
-	
+
 	'GROUP_AVATAR'						=> '群組頭像', 
 	'GROUP_CHANGE_DEFAULT'				=> '您確定您要將自己的預設會員群組改成「%s」嗎？',
 	'GROUP_CLOSED'						=> '封閉的',

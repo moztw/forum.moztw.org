@@ -4,9 +4,9 @@
 * help_bbcode [正體中文]
 *
 * @package language
-* @version $Id: help_bbcode.php 9623 2009-06-18 18:12:28Z nickvergessen $
+* @version $Id$
 * @copyright (c) 2001 - 2007 phpBB TW Group (心靈捕手)
-* @license http://opensource.org/licenses/gpl-license.php GNU Public License 
+* @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
 */
 

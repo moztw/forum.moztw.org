@@ -4,7 +4,7 @@
 * posting [正體中文]
 *
 * @package language
-* @version $Id: posting.php 9742 2009-07-09 10:34:40Z bantu $
+* @version $Id$
 * @copyright (c) 2001 - 2007 phpBB TW Group (Mac)
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
@@ -42,33 +42,33 @@ $lang = array_merge($lang, array(
 	'ADD_POLL'	=> '建立票選活動',
 	'ADD_POLL_EXPLAIN'	=> '如果您要在主題內進行票選活動，請填寫下方表單。',
 	'ALREADY_DELETED'	=> '很抱歉！內容已經被刪除了。',
+	'ATTACH_DISK_FULL'			=> '沒有足夠的硬碟空間可以發表這個附加檔案。',
 	'ATTACH_QUOTA_REACHED'	=> '很抱歉！您的附加檔案配額已滿。',
 	'ATTACH_SIG'	=> '附上簽名 (簽名檔可以在會員控制台中更改)',
 
 	'BBCODE_A_HELP'	=> '將附加檔案加入文章內：[attachment=]filename.ext[/attachment]',
 	'BBCODE_B_HELP'	=> '粗體：[b]text[/b]',
 	'BBCODE_C_HELP'	=> '顯示程式代碼：[code]code[/code]',
-	'BBCODE_E_HELP'	=> '列表：增加一個列表元件',
+	'BBCODE_D_HELP'				=> '插入 Flash：[flash=寬度,高度]http://url[/flash]',
 	'BBCODE_F_HELP'	=> '文字大小：[size=x-small]small text[/size]',
 	'BBCODE_IS_OFF'	=> '%sBBCode%s <em>禁止</em>使用',
 	'BBCODE_IS_ON'	=> '%sBBCode%s <em>允許</em>使用',
 	'BBCODE_I_HELP'	=> '斜體：[i]text[/i]',
-	'BBCODE_L_HELP'	=> '列表：[list]text[/list]',
-	'BBCODE_LISTITEM_HELP'	=> '列表條目：[*]text[/*]',
-	'BBCODE_O_HELP'	=> '有序列表：[list=]text[/list]',
+	'BBCODE_L_HELP'				=> '列表：[list][*]text[/list]', 
+	'BBCODE_LISTITEM_HELP'		=> '列表條目：[*]text',
+	'BBCODE_O_HELP'				=> '有序列表：例如 [list=1][*]第一點[/list] 或 [list=a][*]a 點[/list]',
 	'BBCODE_P_HELP'	=> '插入圖片：[img]http://image_url[/img]',
 	'BBCODE_Q_HELP'	=> '引用文字：[quote]text[/quote]',
 	'BBCODE_S_HELP'	=> '文字顏色：[color=red]text[/color]  提示：您也可以使用 color=#FF0000',
 	'BBCODE_U_HELP'	=> '底線：[u]text[/u]',
 	'BBCODE_W_HELP'	=> '插入連結：[url]http://url[/url] 或 [url=http://url]URL text[/url]',
-	'BBCODE_D_HELP'	=> '插入 Flash：[flash=寬度,高度]http://url[/flash]',
+	'BBCODE_Y_HELP'				=> '列表：增加一個列表元件',
 	'BUMP_ERROR'	=> '您不能在發表後馬上進行推文。',
 
 	'CANNOT_DELETE_REPLIED'	=> '很抱歉！您只能刪除尚無回覆的文章。',
 	'CANNOT_EDIT_POST_LOCKED'	=> '這篇文章已經被鎖定，您不能編輯它。',
 	'CANNOT_EDIT_TIME'	=> '您不能編輯或刪除這篇文章。',
 	'CANNOT_POST_ANNOUNCE'	=> '很抱歉！您不能發表公告主題。',
-	'CANNOT_POST_BLACKLISTED_SITE'		=> '很抱歉！您不能發表提到 %s 的訊息。',
 	'CANNOT_POST_STICKY'	=> '很抱歉！您不能發表置頂主題。',
 	'CHANGE_TOPIC_TO'	=> '將主題類型轉換成',
 	'CLOSE_TAGS'	=> '關閉標籤',

@@ -4,7 +4,7 @@
 * viewtopic [正體中文]
 *
 * @package language
-* @version $Id: viewtopic.php 9972 2009-08-14 08:42:46Z Kellanved $
+* @version $Id$
 * @copyright (c) 2001 - 2007 phpBB TW Group (Mac)
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *

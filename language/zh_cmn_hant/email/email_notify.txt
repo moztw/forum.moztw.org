@@ -1,4 +1,4 @@
-Subject:「{SITENAME}」 - E-mail 好友
+Subject: 「{SITENAME}」 - E-mail 好友
 
 親愛的 {TO_USERNAME} 您好：
 

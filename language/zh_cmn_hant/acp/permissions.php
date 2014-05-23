@@ -4,7 +4,7 @@
 * acp_permissions [正體中文]
 *
 * @package language
-* @version $Id: permissions.php 10017 2009-08-18 14:37:49Z bantu $
+* @version $Id$
 * @copyright (c) 2001 - 2007 phpBB TW Group (心靈捕手)
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
@@ -53,7 +53,7 @@ $lang = array_merge($lang, array(
 
 		<br />
 
-		<p>需要瞭解您的 phpBB3 論壇更多的權限設定和管理資訊，請參訪 <a href="http://www.phpbb.com/support/documentation/3.0/quickstart/quick_permissions.html">Chapter 1.5 of our Quick Start Guide</a>。</p>
+		<p>需要瞭解您的 phpBB3 論壇更多的權限設定和管理資訊，請參訪 <a href="https://www.phpbb.com/support/documentation/3.0/quickstart/quick_permissions.html">Chapter 1.5 of our Quick Start Guide</a>。</p>
 	',
 
 	'ACL_NEVER'				=> '從不',
@@ -171,7 +171,7 @@ $lang = array_merge($lang, array(
 	'ROLE_FORUM_POLLS'			=> '標準使用 + 投票',
 	'ROLE_FORUM_READONLY'		=> '只能閱讀',
 	'ROLE_FORUM_STANDARD'		=> '標準使用',
-	'ROLE_FORUM_NEW_MEMBER'		=> '新註冊會員',
+	'ROLE_FORUM_NEW_MEMBER'		=> '新註冊會員訪問',
 	'ROLE_MOD_FULL'				=> '完全版主',
 	'ROLE_MOD_QUEUE'			=> '審核版主',
 	'ROLE_MOD_SIMPLE'			=> '簡單版主',
@@ -181,7 +181,7 @@ $lang = array_merge($lang, array(
 	'ROLE_USER_NOAVATAR'		=> '沒有頭像',
 	'ROLE_USER_NOPM'			=> '沒有私人訊息',
 	'ROLE_USER_STANDARD'		=> '標準功能',
-	'ROLE_USER_NEW_MEMBER'		=> '新註冊會員',
+	'ROLE_USER_NEW_MEMBER'		=> '新註冊會員功能',
 
 
 	'ROLE_DESCRIPTION_ADMIN_FORUM'			=> '可以行使版面管理和版面權限設定。',

@@ -4,7 +4,7 @@
 * help_faq [正體中文]
 *
 * @package language
-* @version $Id: help_faq.php 10495 2010-02-17 10:03:29Z bantu $
+* @version $Id$
 * @copyright (c) 2001 - 2007 phpBB TW Group (yoshika, 心靈捕手, 動機不明)
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
@@ -60,7 +60,7 @@ $help = array(
 	),
 	array(
 		0 => '我過去已經註冊（登入）過，但是現在卻無法登入？！',
-		1 => '您可以從第一次註冊時發給您的 e-mail，檢視會員名稱和密碼，再試一次。很有可能管理員由於某種原因，停用或刪除了您的帳號。有些討論區會利用每隔一段時間移除從未發文的會員做法來減少資料量。如果是這個原因，那麼請重新註冊並參與更多的討論。'
+		1 => '很有可能管理員由於某種原因，停用或刪除了您的帳號。有些討論區會利用每隔一段時間移除從未發文的會員做法來減少資料量。如果是這個原因，那麼請重新註冊並參與更多的討論。'
 	),
 	array(
 		0 => 'COPPA 是甚麼？',
@@ -329,11 +329,11 @@ $help = array(
 	),
 	array(
 		0 => '誰寫了這個討論區程式？',
-		1 => '這個軟體（未經修改的版本）的開發及釋出，著作版權歸於 <a href="http://www.phpbb.com/">phpBB Group</a>。遵循 GNU General Public Licence 版權宣告，可以自由使用和發佈，檢視連結以獲得更詳細的資料。'
+		1 => '這個軟體（未經修改的版本）的開發及釋出，著作版權歸於 <a href="https://www.phpbb.com/">phpBB Group</a>。遵循 GNU General Public Licence 版權宣告，可以自由使用和發佈，檢視連結以獲得更詳細的資料。'
 	),
 	array(
 		0 => '為何沒有我需要的功能？',
-		1 => '這個軟體由 phpBB Group 編寫與授權。如果您確信這個功能有必要增加，那麼請訪問 phpbb.com 網站聽看看 phpBB 團隊的說法。請不要在 phpbb.com 的版面上提出功能需求，開發團隊使用 SourceForge 來處理這類事務。請到那裡搜尋看看是否有類似的需求，或許我們已經有對這個功能的討論。'
+		1 => '這個軟體由 phpBB Group 編寫與授權。如果您確信有必要增加的功能，那麼請訪問 <a href="https://www.phpbb.com/ideas/">phpBB Ideas Centre</a> 網站，在那裡您可以票選已有的想法或建議新的功能。'
 	),
 	array(
 		0 => '關於這個討論區上的濫用或法律上的相關事務，我該向誰反應？',

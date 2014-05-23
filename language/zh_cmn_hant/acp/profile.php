@@ -4,7 +4,7 @@
 * acp_profile [正體中文]
 *
 * @package language
-* @version $Id: profile.php 9916 2009-08-03 15:46:56Z Kellanved $
+* @version $Id$
 * @copyright (c) 2001 - 2007 phpBB TW Group (心靈捕手)
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
@@ -131,6 +131,8 @@ $lang = array_merge($lang, array(
 
 	'SAVE'							=> '儲存',
 	'SECOND_OPTION'					=> '第二選項',
+	'SHOW_NOVALUE_FIELD'			=> '如果沒有值被選上，那麼顯示欄位',
+	'SHOW_NOVALUE_FIELD_EXPLAIN'	=> '如果選填的欄位沒有值被選上，或者如果必填的欄位沒有值被選上，確定是否顯示個人資料欄位。',
 	'STEP_1_EXPLAIN_CREATE'			=> '在這裡，您可以輸入新增個人資料欄位的第一個基本參數。這資訊對於第二步您能夠繼續設定選項完成您的個人資料欄位是需要的。',
 	'STEP_1_EXPLAIN_EDIT'			=> '在這裡，您可以更改個人資料欄位的基本參數。相關的選項將在第二步重新設計。',
 	'STEP_1_TITLE_CREATE'			=> '增加個人資料欄位',

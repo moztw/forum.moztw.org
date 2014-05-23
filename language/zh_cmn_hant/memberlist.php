@@ -4,7 +4,7 @@
 * memberlist [正體中文]
 *
 * @package language
-* @version $Id: memberlist.php 9933 2009-08-06 09:12:21Z marshalrusty $
+* @version $Id$
 * @copyright (c) 2001 - 2007 phpBB TW Group (Mac)
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
@@ -110,13 +110,11 @@ $lang = array_merge($lang, array(
 
 	'POST_IP'	=> 'IP/網域名稱',
 
-	'RANK'	=> '等級',
 	'REAL_NAME'	=> '收件者名稱',
 	'RECIPIENT'	=> '收件者',
 	'REMOVE_FOE'	=> '移除黑名單',
 	'REMOVE_FRIEND'	=> '移除好友',
 
-	'SEARCH_USER_POSTS'	=> '搜尋會員發表的所有文章',
 	'SELECT_MARKED'	=> '選擇已標記會員',
 	'SELECT_SORT_METHOD'	=> '選擇排列方式 ',
 	'SEND_AIM_MESSAGE'	=> '傳送 AIM 訊息',
