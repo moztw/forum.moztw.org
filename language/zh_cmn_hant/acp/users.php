@@ -52,6 +52,7 @@ $lang = array_merge($lang, array(
 	'CANNOT_FORCE_REACT_FOUNDER'	=> '您不被允許強迫再啟用創始人帳號。',
 	'CANNOT_FORCE_REACT_YOURSELF'	=> '您不被允許強迫再啟用自己的帳號。',
 	'CANNOT_REMOVE_ANONYMOUS'		=> '您不能移除訪客的會員帳號。',
+	'CANNOT_REMOVE_FOUNDER'			=> '您不被允許移除創始人帳號。',
 	'CANNOT_REMOVE_YOURSELF'		=> '您不被允許移除自己的帳號。',
 	'CANNOT_SET_FOUNDER_IGNORED'	=> '您不能提升被忽略的會員為創始人。',
 	'CANNOT_SET_FOUNDER_INACTIVE'	=> '在提升會員為創始人之前您需要先啟用他們的帳號，只有已啟用的會員才能被提升。',

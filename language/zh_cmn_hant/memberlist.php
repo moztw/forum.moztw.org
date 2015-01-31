@@ -138,6 +138,7 @@ $lang = array_merge($lang, array(
 	),
 	'USER_ONLINE'	=> '線上',
 	'USER_PRESENCE'	=> '個人頭像',
+	'USERS_PER_PAGE'		=> '每頁會員',
 
 	'VIEWING_PROFILE'	=> '檢視個人資料 - %s',
 	'VISITED'	=> '最後訪問',

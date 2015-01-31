@@ -266,7 +266,7 @@ $lang = array_merge($lang, array(
 	'MOVE_DELETED_MESSAGES_TO'   => '把已刪除的資料夾內的私人訊息移動到',
 	'MOVE_DOWN'   => '往下移',
 	'MOVE_MARKED_TO_FOLDER'   => '移動選擇的私人訊息到 %s',
-	'MOVE_PM_ERROR'   => '當移動私人訊息到新的資料夾時發生錯誤，只有 %1d / %2d 個私人訊息成功移動。',
+	'MOVE_PM_ERROR'					=> '當移動私人訊息到新的資料夾時發生錯誤，只有 %1$d 從 %2$d 個私人訊息成功移動。',
 	'MOVE_TO_FOLDER'   => '移動到資料夾',
 	'MOVE_UP'   => '往上移',
 

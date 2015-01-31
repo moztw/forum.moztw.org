@@ -2,7 +2,7 @@ Subject: 新主題通知 -「{FORUM_NAME}」
 
 親愛的 {USERNAME} 您好：
 
-您收到這個通知是因為您在「{SITENAME}」 訂閱了版面「{FORUM_NAME}」。自從您最後訪問後在這個版面收到了<!-- IF AUTHOR_NAME !== '' -->由 {AUTHOR_NAME} 發表的<!-- ENDIF -->新主題「{TOPIC_TITLE}」。您可以點選下面的連結檢視此版面，在您檢視版面之前不會再有更多的通知。
+您收到這個通知，是因為您在「{SITENAME}」訂閱了「{FORUM_NAME}」版面。自從您上回訪問論壇後，在這個版面收到了<!-- IF AUTHOR_NAME !== '' -->由 {AUTHOR_NAME} 發表的<!-- ENDIF -->新主題「{TOPIC_TITLE}」。您可以點選下面的連結檢視此版面，在您檢視版面之前不會再有更多的通知。
 
 {U_FORUM}
 

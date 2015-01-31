@@ -178,6 +178,7 @@ $lang = array_merge($lang, array(
 
 	'QUOTE_DEPTH_EXCEEDED'	=> '您最多允許使用 %1$d 層引用。',
 
+	'REMOTE_UPLOAD_TIMEOUT'		=> '指定的檔案無法上傳，因為請求逾時。',
 	'SAVE'	=> '儲存',
 	'SAVE_DATE'	=> '儲存時間為',
 	'SAVE_DRAFT'	=> '儲存草稿',
@@ -219,7 +220,7 @@ $lang = array_merge($lang, array(
 	'VIEW_MESSAGE'	=> '%s檢視您送出的內容%s',
 	'VIEW_PRIVATE_MESSAGE'	=> '%s檢視您送出的私人訊息%s',
 
-	'WRONG_FILESIZE'	=> '檔案太大了，最大允許的檔案大小為 %1d %2s。',
+	'WRONG_FILESIZE'	=> '檔案太大了，最大允許的檔案大小為 %1$d %2$s。',
 	'WRONG_SIZE'	=> '圖檔最小限制為寬 %1$d 像素，高 %2$d 像素。最大限制為寬 %3$d 像素，高 %4$d 像素。您送出的圖檔為：寬 %5$d 像素，高 %6$d 像素。',
 ));
 

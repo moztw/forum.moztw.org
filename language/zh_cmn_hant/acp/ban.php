@@ -74,11 +74,11 @@ $lang = array_merge($lang, array(
 	'PERMANENT'		=> '永久的',
 
 	'UNTIL'						=> '直到',
-	'USER_BAN'					=> '封鎖一個或更多個會員名稱',
+	'USER_BAN'					=> '以會員名稱封鎖一個或更多個會員',
 	'USER_BAN_EXCLUDE_EXPLAIN'	=> '啟用這個功能由所有目前的封鎖中排除已輸入的會員名稱。',
 	'USER_BAN_EXPLAIN'			=> '要指定多個不同的會員名稱，請每一行輸入一個。使用 <span style="text-decoration: underline;">搜尋會員</span> 功能，可自動地探訪以及增加一個或更多個會員。',
 	'USER_NO_BANNED'			=> '沒有封鎖的會員名稱',
-	'USER_UNBAN'				=> '解除封鎖或解除排除的會員名稱',
+	'USER_UNBAN'				=> '以會員名稱解除封鎖或解除排除的會員',
 	'USER_UNBAN_EXPLAIN'		=> '您可以使用適當的滑鼠與鍵盤的結合，一次選擇多個會員名稱，執行解除封鎖或解除排除的操作。排除的會員名稱有特別背景標示。',
 ));
 
