@@ -18,7 +18,7 @@ class acp_rss_info
 		return array(
 			'filename'	=> 'acp_rss',
 			'title'		=> 'ACP_RSS',
-			'version'	=> '1.2.1',
+			'version'	=> '1.2.1-PL1',
 			'modes'		=> array(
 				'rss_feeds'	=> array('title' => 'ACP_RSS_FEEDS', 'auth' => 'acl_a_board', 'cat' => array('ACP_GENERAL_TASKS')),
 			),

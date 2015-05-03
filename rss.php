@@ -1,7 +1,7 @@
 <?php
 /**
 * @package: phpBB 3.0.5 :: MSSTI RSS feed 2.0 -> root/rss.php
-* @version: $Id: rss.php, v 1.2.1 2009/06/01 09:06:01 leviatan21 Exp $
+* @version: $Id: rss.php, v 1.2.1-PL1 2010/05/10 10:05:10 leviatan21 Exp $
 * @copyright: (c) 2008-2009 leviatan21 < info@mssti.com > (Gabriel) http://www.mssti.com/phpbb3/
 * @license: http://opensource.org/licenses/gpl-license.php GNU Public License
 * @author: leviatan21 - http://www.phpbb.com/community/memberlist.php?mode=viewprofile&u=345763
@@ -24,15 +24,6 @@ include($phpbb_root_path . 'common.' . $phpEx);
 
 // Start session
 $user->session_begin();
-
-/** FIX user - Start **/
-$user_id	= request_var('uid', 0);
-if ( $user_id != 0 )
-{
-	$user->session_create($user_id);
-}
-/** FIX user - END **/
-
 $auth->acl($user->data);
 $user->setup();
 $user->add_lang( array('common', 'viewtopic', 'acp/common', 'mods/rss') );
@@ -43,7 +34,7 @@ $rss = new phpbb_rss();
 // Initialize default values
 $rss->rss_get_ini();
 
-// All must happens inside the feed
+// All must happens inside the feed 
 if ( !$config['rss_enable'] )
 {
 	$template->assign_block_vars('items', array(
@@ -419,7 +410,7 @@ class phpbb_rss
 					$sql_array['FROM'][POSTS_TABLE]  = 'p';
 					$sql_array['FROM'][ATTACHMENTS_TABLE] = 'a';
 					$sql_array['FROM'][USERS_TABLE]  = 'u';
-					$sql_array['WHERE'] = 'p.post_approved = 1 AND p.post_attachment = 1 AND a.post_msg_id = p.post_id AND t.topic_id = p.topic_id AND f.forum_id = p.forum_id AND u.user_id = p.poster_id ';
+					$sql_array['WHERE'] = 'p.post_approved = 1 AND p.post_attachment = 1 AND a.post_msg_id = p.post_id AND t.topic_id = p.topic_id AND f.forum_id = p.forum_id AND u.user_id = p.poster_id '; 
 					$sql_array['ORDER_BY'] = 'LOWER(a.filetime) DESC';
 				}
 			break;
@@ -455,8 +446,8 @@ class phpbb_rss
 					if ( $this->rss_f_id != 0 )
 					{
 						// Determine forum childs...
-						$sql = 'SELECT sf.forum_id
-							FROM ' . FORUMS_TABLE . ' f, ' . FORUMS_TABLE . ' sf
+						$sql = 'SELECT sf.forum_id 
+							FROM ' . FORUMS_TABLE . ' f, ' . FORUMS_TABLE . ' sf 
 							WHERE f.forum_id = ' . $this->rss_f_id . '
 								AND ( sf.left_id BETWEEN f.left_id AND f.right_id )';
 						$result = $db->sql_query($sql);
@@ -587,7 +578,7 @@ class phpbb_rss
 	* Get items property
 	*
 	* @param array	$row		Array with items data
-	*
+	* 
 	* @return array $item_row	Array with items data
 	**/
 	function rss_adjust_item(&$row)
@@ -606,8 +597,7 @@ class phpbb_rss
 		if ( $config['rss_items_statistics'] )
 		{
 			// Look if the user has email and allow to display it ;)
-			// $item_row['AUTHOR'] = ( (isset($row['user_allow_viewemail']) && isset($row['user_email']) ) ? $row['user_email'] : $config['board_email'] ) . ' (' . $row['username'] . ')';
-			$item_row['AUTHOR'] = $row['username'];
+			$item_row['AUTHOR']			= ( (isset($row['user_allow_viewemail']) && isset($row['user_email']) ) ? $row['user_email'] : $config['board_email'] ) . ' (' . $row['username'] . ')';
 			$item_row['CATEGORY']		= $this->rss_append_sid( URL_VIEWFORUM, array('f' => $row['forum_id']) );
 			$item_row['CATEGORY_NAME']	= $row['forum_name'];
 			$item_row['DATE']			= $row[$this->row_date];
@@ -629,25 +619,25 @@ class phpbb_rss
 			case 'topics':
 				$this->lang_mode		= $user->lang['ALL_TOPICS'];
 				$item_row['LINK']		= $this->rss_append_sid( URL_VIEWTOPIC, array('p' => $row['post_id'], '#' => "p{$row['post_id']}") );
-				$item_row['STATS']		= $user->lang['POSTED'] . ' ' . $user->lang['POST_BY_AUTHOR'] . ' ' . $user_link . ' &bull; ' . $user->lang['POSTED_ON_DATE'] . ' ' . $user->format_date($row['topic_time']). ' &bull; ' . $user->lang['REPLIES'] . ' ' . $row['topic_replies'] . ' &bull; ' . $user->lang['VIEWS'] . ' ' . $row['topic_views'];
+				$item_row['STATS']		= $user->lang['POSTED'] . ' ' . $user->lang['POST_BY_AUTHOR'] . ' ' . $user_link . ' &bull; ' . $user->lang['POSTED_ON_DATE'] . ' ' . $user->format_date($row[$this->row_date]). ' &bull; ' . $user->lang['REPLIES'] . ' ' . $row['topic_replies'] . ' &bull; ' . $user->lang['VIEWS'] . ' ' . $row['topic_views'];
 			break;
 
 			case 'newposts':
 				$this->lang_mode		= $user->lang['RSS_NEWPOST'];
 				$item_row['LINK']		= $this->rss_append_sid( URL_VIEWTOPIC, array('p' => $row['post_id'], '#' => "p{$row['post_id']}") );
-				$item_row['STATS']		= $user->lang['POSTED'] . ' ' . $user->lang['POST_BY_AUTHOR'] . ' ' . $user_link . ' &bull; ' . $user->lang['POSTED_ON_DATE'] . ' ' . $user->format_date($row['topic_time']). ' &bull; ' . $user->lang['REPLIES'] . ' ' . $row['topic_replies'] . ' &bull; ' . $user->lang['VIEWS'] . ' ' . $row['topic_views'];
+				$item_row['STATS']		= $user->lang['POSTED'] . ' ' . $user->lang['POST_BY_AUTHOR'] . ' ' . $user_link . ' &bull; ' . $user->lang['POSTED_ON_DATE'] . ' ' . $user->format_date($row[$this->row_date]). ' &bull; ' . $user->lang['REPLIES'] . ' ' . $row['topic_replies'] . ' &bull; ' . $user->lang['VIEWS'] . ' ' . $row['topic_views'];
 			break;
 
 			case 'news':
 				$this->lang_mode		= $user->lang['RSS_NEWS'];
 				$item_row['LINK']		= $this->rss_append_sid( URL_VIEWTOPIC, array('p' => $row['post_id'], '#' => "p{$row['post_id']}") );
-				$item_row['STATS']		= $user->lang['POSTED'] . ' ' . $user->lang['POST_BY_AUTHOR'] . ' ' . $user_link . ' &bull; ' . $user->lang['POSTED_ON_DATE'] . ' ' . $user->format_date($row['topic_time']). ' &bull; ' . $user->lang['REPLIES'] . ' ' . $row['topic_replies'] . ' &bull; ' . $user->lang['VIEWS'] . ' ' . $row['topic_views'];
+				$item_row['STATS']		= $user->lang['POSTED'] . ' ' . $user->lang['POST_BY_AUTHOR'] . ' ' . $user_link . ' &bull; ' . $user->lang['POSTED_ON_DATE'] . ' ' . $user->format_date($row[$this->row_date]). ' &bull; ' . $user->lang['REPLIES'] . ' ' . $row['topic_replies'] . ' &bull; ' . $user->lang['VIEWS'] . ' ' . $row['topic_views'];
 			break;
 
 			case 'posts':
 				$this->lang_mode		= $user->lang['ALL_POSTS'];
 				$item_row['LINK']		= $this->rss_append_sid( URL_VIEWTOPIC, array('p' => $row['post_id'], '#' => "p{$row['post_id']}") );
-				$item_row['STATS']		= $user->lang['POSTED'] . ' ' . $user->lang['POST_BY_AUTHOR'] . ' ' . $user_link . ' &bull; ' . $user->lang['POSTED_ON_DATE'] . ' ' . $user->format_date($row['post_time']);
+				$item_row['STATS']		= $user->lang['POSTED'] . ' ' . $user->lang['POST_BY_AUTHOR'] . ' ' . $user_link . ' &bull; ' . $user->lang['POSTED_ON_DATE'] . ' ' . $user->format_date($row[$this->row_date]);
 			break;
 
 			case 'egosearch':
@@ -662,14 +652,14 @@ class phpbb_rss
 				$row['post_id']			= $row['post_msg_id'];
 				$row[$this->row_text]	= $this->rss_get_attach( $row );
 				$item_row['LINK']		= $this->rss_append_sid( URL_VIEWTOPIC, array('p' => $row['post_id'], '#' => "p{$row['post_id']}") );
-				$item_row['STATS']		= $user->lang['POSTED'] . ' ' . $user->lang['POST_BY_AUTHOR'] . ' ' . $user_link . ' &bull; ' . $user->lang['POSTED_ON_DATE'] . ' ' . $user->format_date($row['post_time']);
+				$item_row['STATS']		= $user->lang['POSTED'] . ' ' . $user->lang['POST_BY_AUTHOR'] . ' ' . $user_link . ' &bull; ' . $user->lang['POSTED_ON_DATE'] . ' ' . $user->format_date($row[$this->row_date]);
 			break;
 
 			default:
 				$this->lang_mode		= ( ($this->rss_f_id) ? $user->lang['FORUM'] .' » ' . $row['forum_name'] . ( ($this->rss_t_id) ? ' » ' . $user->lang['TOPIC'] . ' : ' . $row['topic_title'] : '' ) : '' );
-				$item_row['TITLE']		= (( $row[$this->row_title] ) ? $row[$this->row_title] : $row[$this->row_title2]) . " | " . $row['forum_name'];
+				$item_row['TITLE']		= $row['forum_name'] . " | " . (( $row[$this->row_title] ) ? $row[$this->row_title] : $row[$this->row_title2]);
 				$item_row['LINK']		= $this->rss_append_sid( URL_VIEWTOPIC, array('p' => $row['post_id'], '#' => "p{$row['post_id']}") );
-				$item_row['STATS']		= $user->lang['POSTED'] . ' ' . $user->lang['POST_BY_AUTHOR'] . ' ' . $user_link . ' &bull; ' . $user->lang['POSTED_ON_DATE'] . ' ' . $user->format_date($row['topic_time']). ' &bull; ' . $user->lang['REPLIES'] . ' ' . $row['topic_replies'] . ' &bull; ' . $user->lang['VIEWS'] . ' ' . $row['topic_views'];
+				$item_row['STATS']		= $user->lang['POSTED'] . ' ' . $user->lang['POST_BY_AUTHOR'] . ' ' . $user_link . ' &bull; ' . $user->lang['POSTED_ON_DATE'] . ' ' . $user->format_date($row[$this->row_date]). ' &bull; ' . $user->lang['REPLIES'] . ' ' . $row['topic_replies'] . ' &bull; ' . $user->lang['VIEWS'] . ' ' . $row['topic_views'];
 			break;
 		}
 
@@ -689,7 +679,7 @@ class phpbb_rss
 
 	/**
 	* Get forum branch
-	*
+	* 
 	* @param string		$row			Post data
 	* @return html
 	**/
@@ -703,10 +693,10 @@ class phpbb_rss
 		// Apply filters
 		$not_in_fid = (sizeof($this->rss_filters())) ? " AND " . $db->sql_in_set('f.forum_id', $this->rss_filters(), true) : "";
 
-		$sql = "SELECT sf.forum_id, sf.forum_name, sf.forum_status, sf.forum_desc, sf.forum_type, sf.forum_topics, sf.forum_desc_uid, sf.forum_desc_bitfield, sf.forum_desc_options, sf.forum_topics, sf.forum_posts
-				FROM " . FORUMS_TABLE . " f, " . FORUMS_TABLE . " sf
+		$sql = "SELECT sf.forum_id, sf.forum_name, sf.forum_status, sf.forum_desc, sf.forum_type, sf.forum_topics, sf.forum_desc_uid, sf.forum_desc_bitfield, sf.forum_desc_options, sf.forum_topics, sf.forum_posts 
+				FROM " . FORUMS_TABLE . " f, " . FORUMS_TABLE . " sf 
 				WHERE f.forum_id = " . $row['forum_id'] . "
-					AND ( sf.left_id BETWEEN " . $row['left_id'] . " AND " . $row['right_id'] . " )
+					AND ( sf.left_id BETWEEN " . $row['left_id'] . " AND " . $row['right_id'] . " ) 
 				$not_in_fid
 				ORDER BY sf.left_id ASC";
 		$forum_result = $db->sql_query($sql);
@@ -739,8 +729,8 @@ class phpbb_rss
 				// Only return up to 100 topics, more will be dangerous? ;)
 				$number_topics = 100;
 
-				$topic_sql = "SELECT t.topic_id, t.topic_status, t.topic_title
-								FROM " . TOPICS_TABLE . " t
+				$topic_sql = "SELECT t.topic_id, t.topic_status, t.topic_title 
+								FROM " . TOPICS_TABLE . " t 
 								WHERE t.forum_id = {$forum_rows['forum_id']}";
 				$topic_result = $db->sql_query_limit($topic_sql, $number_topics);
 
@@ -760,14 +750,14 @@ class phpbb_rss
 					$topic_titles .= '<li><a href="' . $this->rss_append_sid( URL_VIEWTOPIC, array('t' => $topic_row['topic_id']) ) . '">' . $topic_row['topic_title'] . '</a></li>';
 					$sizeof_topis++;
 				}
-				$db->sql_freeresult($topic_result);
+				$db->sql_freeresult($topic_result);	
 
 				if ( $sizeof_topis > 0 )
 				{
 					$text .= "<ul><li><strong>" . ( ($sizeof_topis == 1) ? $user->lang['TOPIC'] : $user->lang['TOPICS'] ) . " : </strong><ul>$topic_titles" . ( $forum_rows['forum_topics'] > $number_topics ? '...' : '' ) . '</ul></li></ul>';
 				}
 			}
-
+			
 //			$text .= "</li>" . $stat . '</ul>';
 			$text .= '</li></ul>';
 
@@ -779,7 +769,7 @@ class phpbb_rss
 
 	/**
 	* Get only attachment
-	*
+	* 
 	* @param string		$row			Post data
 	* @return html
 	**/
@@ -849,7 +839,7 @@ class phpbb_rss
 
 	/**
 	* Find out in which forums ( and all it's child's ) the user is not allowed to view
-	*
+	* 
 	* @return array 	$this->excluded_forums_ary with forum id to exclude
 	**/
 	function rss_filters()
@@ -883,8 +873,8 @@ class phpbb_rss
 		// Start with a list of forums without initial exclusions id's
 		$not_in_fid = ( sizeof($this->excluded_forums_ary) ) ? 'WHERE (' . $db->sql_in_set('forum_id', $this->excluded_forums_ary, true) . ") OR (forum_password <> '' )" : '';
 
-		$sql = "SELECT forum_id, parent_id, forum_password, forum_parents, left_id, right_id
-				FROM " . FORUMS_TABLE . "
+		$sql = "SELECT forum_id, parent_id, forum_password, forum_parents, left_id, right_id 
+				FROM " . FORUMS_TABLE . "  
 				$not_in_fid
 				ORDER BY forum_id";
 		$rss_filters_result = $db->sql_query($sql);
@@ -948,7 +938,7 @@ class phpbb_rss
 	}
 
 	/**
-	* Property build links
+	* Property build links 
 	*
 	* @param string $url The url the session id needs to be appended to (can have params)
 	* @param mixed $params String or array of additional url parameters
@@ -988,12 +978,12 @@ class phpbb_rss
 	/**
 	* Get date in RFC2822 format
 	*
-	* @param $forced	bool 	force time to 0
+	* @param $forced	bool 	force time to 0 
 	* @param $timestamp	integer	the time
 	* @param $timezone	integer	the time zone
-	*
+	* 
 	* @return string	string	date in RFC2822 format
-	* Code based off :
+	* Code based off : 
 	* 	http://cyber.law.harvard.edu/rss/rss.html#requiredChannelElements
 	* 	http://www.faqs.org/rfcs/rfc2822 3.3
 	**/
@@ -1001,7 +991,7 @@ class phpbb_rss
 	{
 		global $config;
 
-		// Local differential hours+min. (HHMM) ( ("+" / "-") 4DIGIT );
+		// Local differential hours+min. (HHMM) ( ("+" / "-") 4DIGIT ); 
 		$timezone  = ( $timezone ) ? $timezone   : $config['board_timezone'];
 		$timezone  = $timezone + $config['board_dst'];
 		$timezone  = ( $timezone > 0 ) ? '+' . $timezone : $timezone;
@@ -1028,8 +1018,8 @@ class phpbb_rss
 	*
 	* @param string		$row			Post data
 	* @param array		$attach_list	array with post id
-	*
-	* @return string
+	* 
+	* @return string	
 	**/
 	function rss_generate_content( $row, $attach_list )
 	{
@@ -1101,7 +1091,7 @@ class phpbb_rss
 		// Potentially Malicious HTML Tags ?
 		// Remove some specials html tag, because somewhere there are a mod to allow html tags ;)
 		// Use (<|&lt;) and (>|&gt;) because can be contained into [code][/code]
-
+		
 		$content = preg_replace(
 			array(
 				'@(<|&lt;)head[^>]*?(>|&gt;).*?(<|&lt;)/head(>|&gt;)@siu',
@@ -1229,13 +1219,13 @@ class phpbb_rss
 	}
 
 	/**
-	* Truncates post text while retaining completes bbcodes tag, triying to not cut in between
+	* Truncates post text while retaining completes bbcodes tag, triying to not cut in between 
 	*
 	* @param string		$content		post text
 	* @param int		$text_limit		number of characters to get
 	* @param string		$uid			bbcode uid
 	* @param bolean		$recursive		call this function from inside this?
-	*
+	* 
 	* @return string	$content
 	**/
 	function rss_truncate_content($content, $text_limit, $uid, $recursive = true )
@@ -1255,7 +1245,7 @@ class phpbb_rss
 		// Start at the 1st char of the string, looking for opening tags. Cutting the text in each space...
 		while( $curr_length < $text_limit )
 		{
-			$_word = split(' ', $str);
+			$_word = explode(' ', $str);
 			$skip_lenght = false;
 
 			// pad it with a space so we can distinguish between FALSE and matching the 1st char (index 0).
@@ -1299,9 +1289,9 @@ class phpbb_rss
 				// Now search for the end of the current bbcode tag, all between [/??:??]
 				if ( strpos($the_curr_bbcode_tag, "=") )
 				{
-					list( $bbcode_tag_close, $garbage ) = split( '[=]', $the_curr_bbcode_tag ); // list( $bbcode_tag, $garbage ) = split( '[=:]', $the_curr_bbcode_tag );
+					list( $bbcode_tag_close, $garbage ) = explode( '[=]', $the_curr_bbcode_tag ); // list( $bbcode_tag, $garbage ) = split( '[=:]', $the_curr_bbcode_tag );
 
-					// little fix for a particular bbode :)
+					// little fix for a particular bbcode :)
 					if ( $bbcode_tag_close != "tr" && $bbcode_tag_close != "td")
 					{
 						$bbcode_tag_close .= ":" . $uid ;
@@ -1344,11 +1334,11 @@ class phpbb_rss
 					$the_second_close_bbcode = strpos($str, $the_curr_bbcode_tag_close)+strlen($the_curr_bbcode_tag_close);
 				}
 
-				// Until here all works like expected,
+				// Until here all works like expected, 
 				// But sometimes the length is much longer as expected, because a bbcode can contain a lot of text, so try to do some magic :)
 				$curr_length_until = strlen( $curr_text ) + strlen( substr($str, 0, $the_second_close_bbcode) );
 
-				// Test if the future lenght is longer that the $text_limit
+				// Test if the future lenght is longer that the $text_limit 
 				if ( ( $curr_length_until > $text_limit ) && !$recursive && !$skip_lenght)
 				{
 					// Run me again but this time only with the current bbcode content, Can we do that ? :) Yes !
@@ -1394,7 +1384,7 @@ class phpbb_rss
 	* Try to resize a big image
 	*
 	* @param string 	$image_src		the image url
-	* @param int		$rss_imagesize	the max-width
+	* @param int		$rss_imagesize	the max-width 
 	* @return html
 	**/
 	function rss_check_imagesize( $image_src, $image_size = 0 )
@@ -1407,7 +1397,7 @@ class phpbb_rss
 		$rss_imagesize	= ( $image_size ) ? $image_size : 200;
 		$width			= '';
 
-		// check image with timeout to ensure we dont wait quite long
+		// check image with timeout to ensure we don�t wait quite long
 		$timeout = 5;
 		$old = ini_set('default_socket_timeout', $timeout);
 
@@ -1475,7 +1465,7 @@ class phpbb_rss
 				'L_NEWEST_USER'			=> sprintf($user->lang['NEWEST_USER'], ''),
 				'STAT_ONLINE_USERS'		=> sprintf($user->lang['RECORD_ONLINE_USERS'], $config['record_online_users'], $user->format_date($config['record_online_date'])),
 				'STAT_NEWEST_USER'		=> $config['newest_username'],
-			));
+			));	
 		}
 
 		/**
@@ -1509,7 +1499,7 @@ class phpbb_rss
 			}
 		}
 
-		// application/xhtml+xml not used because of IE	//header("Content-Type: application/xhtml+xml; charset=UTF-8");
+		// application/xhtml+xml not used because of IE	//header("Content-Type: application/xhtml+xml; charset=UTF-8"); 
 		header('Content-type: application/rss+xml; charset=UTF-8');
 		header("Last-Modified: " . $this->rss_date2822() );
 

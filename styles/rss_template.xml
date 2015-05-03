@@ -18,7 +18,7 @@
 		<webMaster>{FEED_MANAGING}</webMaster>
 		<pubDate>{FEED_DATE}</pubDate>
 		<lastBuildDate>{FEED_TIME}</lastBuildDate>
-		<generator>MSSTI RSS Feed 2.0 Version 1.2.1 - (C) 2008-2009 leviatan21 - http://www.mssti.com/</generator>
+		<generator>MSSTI RSS Feed 2.0 Version 1.2.1-PL1 - (C) 2008-2009 leviatan21 - http://www.mssti.com/</generator>
 
 		<image>
 			<title>{FEED_TITLE}<!-- IF FEED_MODE --> - {FEED_MODE}<!-- ENDIF --></title>
