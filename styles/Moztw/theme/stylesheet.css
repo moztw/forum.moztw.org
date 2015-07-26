@@ -180,53 +180,6 @@ body#sectionDocs li#menu_docs:hover a {
   color: #333;
 }
 
-#footer {
-  border-top: 1px solid #999;
-  margin: 2em 0;
-  padding: 1em 0;
-  text-align: center;
-}
-
-
-#footer ul {
-  background-color: #FFFFFF;
-  font-size: 62.5%; /* This sets the default font size to be equivalent to 10px */
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-#footer li {
-  display: inline;
-}
-
-#footer span,#footer a {
-  white-space: nowrap;
-  padding: 0 0 0 1em;
-}
-
-#footer p {
-  margin:0.6em 0;
-  font-size:1em;
-}
-
-#footer p span,#footer p a {
-  white-space: nowrap;
-  padding: 0 0.3em;
-}
-
-#footer span a {
-  padding: 0;
-}
-
-#footer p,#footer p a {
-  color: #666;
-}
-
-#footer p a:hover {
-  color: #000;
-}
-
 /* Search Field */
 
 #header form {
@@ -271,7 +224,7 @@ body#sectionDocs li#menu_docs:hover a {
 }
 
 #wrapheader {
-  height: 120px;
+  height: auto;
 	padding: 0;
 }
 
@@ -282,6 +235,40 @@ body#sectionDocs li#menu_docs:hover a {
 #wrapfooter {
 	text-align: center;
 	clear: both;
+  border-top: 1px solid #999;
+  margin: 2em 0;
+  padding: 1em 0;
+}
+
+#wrapfooter ul {
+  background-color: #FFFFFF;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#wrapfooter li {
+  display: inline;
+}
+
+#wrapfooter span,#wrapfooter a {
+  white-space: nowrap;
+}
+
+#wrapfooter p {
+  margin:0.6em 0;
+  font-size:1em;
+  color: #666;
+}
+
+#wrapfooter p span,#wrapfooter p a {
+  white-space: nowrap;
+  padding: 0 0.3em;
+  color: #666;
+}
+
+#wrapfooter p a:hover {
+  color: #000;
 }
 
 #wrapnav {
