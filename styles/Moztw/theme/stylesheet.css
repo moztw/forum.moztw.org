@@ -1,14 +1,9 @@
-/*  phpBB 3.0 Style Sheet
+/*  phpBB3 Style Sheet
     --------------------------------------------------------------
-	Style name:		subsilver2
-	Based on style:	subSilver (the default phpBB 2 style)
-	Original author:	subBlue ( http://www.subBlue.com/ )
-	Modified by:		psoTFX and the phpBB team ( http://www.phpbb.com )
-	
-	This is an alternative style for phpBB3 for those wishing to stay with
-	the familiar subSilver style of phpBB version 2.x
-	
-	Copyright 2006 phpBB Group ( http://www.phpbb.com/ )
+	Style name:			subsilver2
+	Based on style:		subSilver (the default phpBB 2.0.x style)
+	Original author:	Tom Beddard ( http://www.subblue.com/ )
+	Modified by:		phpBB Group ( https://www.phpbb.com/ )
     --------------------------------------------------------------
 */
 
@@ -28,135 +23,142 @@ body {
 	/* Text-Sizing with ems: http://www.clagnut.com/blog/348/ */
 	font-family: "Lucida Grande", Verdana, Helvetica, Arial, sans-serif;
 	color: #323D4F;
+	background-color: #FFFFFF;
 	font-size: 82.5%; /* This sets the default font size to be equivalent to 10px */
 	margin: 25px;
-	background:#FFFFFF url('./images/moztw/body_back.gif') repeat-x scroll 0 0;
+  background:#FFFFFF url('./images/moztw/body_back.gif') repeat-x scroll 0 0;
 }
-
 
 /* Moztw header & footer theme */
 
-
 #header {
-margin-left:2em;
-margin-right:2em;
-}
-
-#header {
--moz-background-clip:border;
--moz-background-inline-policy:continuous;
--moz-background-origin:padding;
-background:#455372 url('./images/moztw/header_bl.png') repeat-x scroll left bottom;
-font-size:small;
-height:3em;
-min-height:39px;
-padding:15px 0;
-position:relative;
-margin-bottom:1em;
+  margin-left:2em;
+  margin-right:2em;
+  margin-bottom:1em;
+  background-clip:border;
+  box-decoration-break:slice;
+  -webkit-box-decoration-break:slice;
+  -o-box-decoration-break:slice;
+  background-origin:padding-box;
+  background:#455372 url('./images/moztw/header_bl.png') repeat-x scroll left bottom;
+  font-size:small;
+  height:3em;
+  min-height:39px;
+  padding:15px 0;
+  position:relative;
 }
 
 #header h1 {
-top:0px;
--moz-background-clip:border;
--moz-background-inline-policy:continuous;
--moz-background-origin:padding;
-background:transparent url('./images/moztw/header_tl.gif') no-repeat scroll 0 0;
-font-size:2px;
-height:8px;
-left:0;
-margin:0;
-position:absolute;
-z-index:100;
-border:0 none;
+  top:0px;
+  background-clip:border;
+  box-decoration-break:slice;
+  -webkit-box-decoration-break:slice;
+  -o-box-decoration-break:slice;
+  background-origin:padding-box;
+  background:transparent url('./images/moztw/header_tl.gif') no-repeat scroll 0 0;
+  font-size:2px;
+  height:8px;
+  left:0;
+  margin:0;
+  position:absolute;
+  z-index:100;
+  border:0 none;
 }
 
 #header h1 a {
--moz-background-clip:border;
--moz-background-inline-policy:continuous;
--moz-background-origin:padding;
-background:transparent url('./images/moztw/header_logo3.png') no-repeat scroll 0 0;
-display:block;
-height:65px;
-text-decoration:none;
-text-indent:-700em;
-width:354px;
+  background-clip:border;
+  box-decoration-break:slice;
+  -webkit-box-decoration-break:slice;
+  -o-box-decoration-break:slice;
+  background-origin:padding-box;
+  background:transparent url('./images/moztw/header_logo3.png') no-repeat scroll 0 0;
+  display:block;
+  height:65px;
+  text-decoration:none;
+  text-indent:-700em;
+  width:354px;
 }
 
 
 #header ul {
--moz-background-clip:border;
--moz-background-inline-policy:continuous;
--moz-background-origin:padding;
-background:transparent url('./images/moztw/header_br.gif') no-repeat scroll right bottom;
-bottom:0;
-list-style-image:none;
-list-style-position:outside;
-list-style-type:none;
-margin:0;
-padding:0 15px 0 0;
-position:absolute;
-right:0;
-width:auto;
-z-index:90;
-line-height:1.5em;
+  background-clip:border;
+  box-decoration-break:slice;
+  -webkit-box-decoration-break:slice;
+  -o-box-decoration-break:slice;
+  background-origin:padding-box;
+  background:transparent url('./images/moztw/header_br.gif') no-repeat scroll right bottom;
+  bottom:0;
+  list-style-image:none;
+  list-style-position:outside;
+  list-style-type:none;
+  margin:0;
+  padding:0 15px 0 0;
+  position:absolute;
+  right:0;
+  width:auto;
+  z-index:90;
+  line-height:1.5em;
 }
 
 #header ul a {
--moz-background-clip:border;
--moz-background-inline-policy:continuous;
--moz-background-origin:padding;
-background:transparent url('./images/moztw/header_tab.gif') no-repeat scroll 0 -600px;
-color:#FFFFFF;
-display:block;
-float:left;
-font-weight:bold;
-padding:4px 4px 4px 10px;
-text-decoration:none;
+  background-clip:border;
+  box-decoration-break:slice;
+  -webkit-box-decoration-break:slice;
+  -o-box-decoration-break:slice;
+  background-origin:padding-box;
+  background:transparent url('./images/moztw/header_tab.gif') no-repeat scroll 0 -600px;
+  color:#FFFFFF;
+  display:block;
+  float:left;
+  font-weight:bold;
+  padding:4px 4px 4px 10px;
+  text-decoration:none;
 }
 
 #header li {
--moz-background-clip:border;
--moz-background-inline-policy:continuous;
--moz-background-origin:padding;
-background:transparent url('./images/moztw/header_tab.gif') no-repeat scroll 100% -600px;
-border-bottom:1px solid #515358;
-float:right;
-margin:0 1px 0 0;
-padding:0 6px 0 0;
-display:inline;
-white-space:nowrap;
+  background-clip:border;
+  box-decoration-break:slice;
+  -webkit-box-decoration-break:slice;
+  -o-box-decoration-break:slice;
+  background-origin:padding-box;
+  background:transparent url('./images/moztw/header_tab.gif') no-repeat scroll 100% -600px;
+  border-bottom:1px solid #515358;
+  float:right;
+  margin:0 1px 0 0;
+  padding:0 6px 0 0;
+  display:inline;
+  white-space:nowrap;
 }
 
 #header ul li:hover a { background-position: 0% -400px; }
 #header ul li:hover { background-position: 100% -400px; }
 
-
 #header form #cjk {
-	font-size: 90%;
-	border:	1px solid #9097A2;
-	background: #D9DBE1;
-	padding: 2px;
-	font-family: georgia,sans-serif;
+  font-size: 90%;
+  border: 1px solid #9097A2;
+  background: #D9DBE1;
+  padding: 2px;
+  font-family: georgia,sans-serif;
 }
-	
+
 body#sectionAbout li#menu_aboutus a,
 body#sectionProducts li#menu_products a,
 body#sectionForum li#menu_forum a,
 body#sectionWiki li#menu_wiki a,
 body#sectionLinks li#menu_links a,
 body#sectionDocs li#menu_docs a {
-	background-position: 0% -200px;
-	color: #039;
+  background-position: 0% -200px;
+  color: #039;
 }
-	
+
 body#sectionAbout li#menu_aboutus,
 body#sectionProducts li#menu_products,
 body#sectionForum li#menu_forum,
 body#sectionWiki li#menu_wiki,
 body#sectionLinks li#menu_links,
 body#sectionDocs li#menu_docs {
-	background-position: 100% -200px;
-	border-bottom: 1px solid #fff;
+  background-position: 100% -200px;
+  border-bottom: 1px solid #fff;
 }
 
 body#sectionAbout li#menu_aboutus:hover,
@@ -165,7 +167,7 @@ body#sectionForum li#menu_forum:hover,
 body#sectionWiki li#menu_wiki:hover,
 body#sectionLinks li#menu_links:hover,
 body#sectionDocs li#menu_docs:hover {
-	background-position: 100% 0%;
+  background-position: 100% 0%;
 }
 
 body#sectionAbout li#menu_aboutus:hover a,
@@ -174,107 +176,102 @@ body#sectionForum li#menu_forum:hover a,
 body#sectionWiki li#menu_wiki:hover a,
 body#sectionLinks li#menu_links:hover a,
 body#sectionDocs li#menu_docs:hover a {
-	background-position: 0% 0%;
-	color: #333;
+  background-position: 0% 0%;
+  color: #333;
 }
 
 #footer {
-	border-top: 1px solid #999;
-	margin: 2em 0;
-	padding: 1em 0;
-	text-align: center;
+  border-top: 1px solid #999;
+  margin: 2em 0;
+  padding: 1em 0;
+  text-align: center;
 }
 
+
 #footer ul {
-	margin: 0;
-	padding: 0;
-	list-style: none;
+  background-color: #FFFFFF;
+  font-size: 62.5%; /* This sets the default font size to be equivalent to 10px */
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 #footer li {
-	display: inline;
+  display: inline;
 }
 
 #footer span,#footer a {
-	white-space: nowrap;
-	padding: 0 0 0 1em;
+  white-space: nowrap;
+  padding: 0 0 0 1em;
 }
 
 #footer p {
-	margin:0.6em 0;
-	font-size:1em;
+  margin:0.6em 0;
+  font-size:1em;
 }
 
 #footer p span,#footer p a {
-	white-space: nowrap;
-	padding: 0 0.3em;
+  white-space: nowrap;
+  padding: 0 0.3em;
 }
 
 #footer span a {
-	padding: 0;
+  padding: 0;
 }
 
 #footer p,#footer p a {
-	color: #666;
+  color: #666;
 }
 
 #footer p a:hover {
-	color: #000;
+  color: #000;
 }
 
 /* Search Field */
 
-	#header form {
-		position: absolute;
-		top: 0;
-		right: 0;
-		padding: 12px 15px 0 0;
-		background: url('./images/moztw/header_tr.gif') no-repeat top right;
-		margin: 0; /* need for IE Mac */
-		text-align: right; /* need for IE Mac */
-		white-space: nowrap; /* for Opera */
-	}
-		
-	#header form #submit {
-		font-size: 85%;
-		background: #6A7389;
-		color: #fff;
-		padding: 1px 4px;
-		border-right: 1px solid #283043;
-		border-bottom: 1px solid #283043;
-		border-top: 1px solid #9097A2;
-		border-left: 1px solid #9097A2;
-	}
-	
-	#header form #q, #header form #key, #header form #search_keywords {
-		width: 130px;
-		font-size: 85%;
-		border:	1px solid #9097A2;
-		background: none #D9DBE1 !important;
-		padding: 2px;
-	}
-	#header form #q:hover, #header form #q:focus,
-	#header form #key:hover, #header form #key:focus,
-	#header form #search_keywords:hover, #header form #search_keywords:focus {
-		background: #fff  !important;
-	}
+#header form {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 12px 15px 0 0;
+  background: url('./images/moztw/header_tr.gif') no-repeat top right;
+  margin: 0; /* need for IE Mac */
+  text-align: right; /* need for IE Mac */
+  white-space: nowrap; /* for Opera */
+}
 
+#header form #submit {
+  font-size: 85%;
+  background: #6A7389;
+  color: #fff;
+  padding: 1px 4px;
+  border-right: 1px solid #283043;
+  border-bottom: 1px solid #283043;
+  border-top: 1px solid #9097A2;
+  border-left: 1px solid #9097A2;
+}
+
+#header form #q, #header form #key, #header form #search_keywords {
+  width: 130px;
+  font-size: 85%;
+  border: 1px solid #9097A2;
+  background: none #D9DBE1 !important;
+  padding: 2px;
+}
+#header form #q:hover, #header form #q:focus,
+#header form #key:hover, #header form #key:focus,
+#header form #search_keywords:hover, #header form #search_keywords:focus {
+  background: #fff  !important;
+}
 /* End of moztw header theme */
-
 
 /* Google Search Result */
 #cse-search-results iframe{
-	width: 90%;
+  width: 90%;
 }
 
-
 #wrapheader {
-/*	min-height: 120px; */
-	height: auto !important;
-	height: 120px;
-/*	background-image: url('./images/background.gif');
-	background-repeat: repeat-x;*/
-/*	padding: 0 25px 15px 25px;*/
+  height: 120px;
 	padding: 0;
 }
 
@@ -297,11 +294,11 @@ body#sectionDocs li#menu_docs:hover a {
 }
 
 #logodesc {
-	display: none;
-	margin-bottom: 5px;
-	padding: 100px 25px;
-	background: #D9DFE4;
-	border-bottom: 1px solid #4787A7;
+  display: none;
+  margin-bottom: 5px;
+  padding: 100px 25px;
+  background: #D9DFE4;
+  border-bottom: 1px solid #4787A7;
 }
 
 #menubar {
@@ -309,6 +306,7 @@ body#sectionDocs li#menu_docs:hover a {
 }
 
 #datebar {
+	margin: 10px 25px 0 25px;
 }
 
 #findbar {
@@ -334,8 +332,10 @@ body#sectionDocs li#menu_docs:hover a {
 }
 
 #pageheader h2 {
-	text-shadow: 0px 1px 1px #555;
+  text-shadow: 0px 1px 1px #555;
 }
+
+#pageheader { }
 #pagecontent { }
 #pagefooter { }
 
@@ -380,7 +380,7 @@ p {
 }
 
 p.moderators {
-	margin: 8px 0 0;
+	margin: 0;
 	float: left;
 	color: black;
 	font-weight: bold;
@@ -417,7 +417,7 @@ p.datetime {
 	margin: 0;
 	float: right;
 	white-space: nowrap;
-	font-size: 0.9em;
+	font-size: 1em;
 }
 
 .rtl p.datetime {
@@ -427,12 +427,7 @@ p.datetime {
 p.searchbar {
 	padding: 2px 0;
 	white-space: nowrap;
-} 
-
-p.searchbar span {
-	float:right;
-	font-size: 0.9em;
-} 
+}
 
 p.searchbarreg {
 	margin: 0;
@@ -456,19 +451,20 @@ p.topicdetails {
 	margin: 1px 0;
 }
 
-.postreported, .postreported a:visited, .postreported a:hover, .postreported a:link, .postreported a:active {
+.postreported, .postreported a:link, .postreported a:visited, .postreported a:hover, .postreported a:active {
 	margin: 1px 0;
 	color: red;
 	font-weight:bold;
 }
 
-.postapprove, .postapprove a:visited, .postapprove a:hover, .postapprove a:link, .postapprove a:active {
+.postapprove, .postapprove a:link, .postapprove a:visited, .postapprove a:hover, .postapprove a:active {
 	color: green;
 	font-weight:bold;
 }
 
 .postapprove img, .postreported img {
 	vertical-align: bottom;
+	padding-top: 5px;
 }
 
 .postauthor {
@@ -480,7 +476,7 @@ p.topicdetails {
 }
 
 .postbody {
-	font-size: 1.2em;
+	font-size: 1.3em;
 	line-height: 1.4em;
 	font-family: "Lucida Grande", "Trebuchet MS", Helvetica, Arial, sans-serif;
 }
@@ -504,7 +500,7 @@ p.topicdetails {
 }
 
 .nav td{
-	border: none !important;
+  border: none !important;
 }
 
 .pagination {
@@ -534,8 +530,8 @@ p.topicdetails {
 }
 
 .gentiny {
-	margin: 1px 1px;
-	font-size: 0.9em;
+  margin: 1px 1px;
+  font-size: 0.9em;
 }
 
 .copyright {
@@ -551,7 +547,11 @@ p.topicdetails {
 	text-decoration: none;
 }
 
-.error {
+.online {
+	color: green;
+}
+
+.offline, .error, .inactive {
 	color: red;
 }
 
@@ -559,11 +559,11 @@ p.topicdetails {
 /* Tables
  ------------ */
 th {
-	color: #FFFFFF;
+	color: #FFA34F;
 	font-size: 1.1em;
 	font-weight: bold;
 	background-color: #006699;
-	background-image: url('./images/cellpic3.png');
+	background-image: url('./images/cellpic3.gif');
 	white-space: nowrap;
 	padding: 7px 5px;
 }
@@ -577,19 +577,12 @@ td.profile {
 
 .tablebg {
 	background-color: #A9B8C2;
-	padding: 3px;
-	-moz-border-radius:7px 7px;
-	-webkit-border-radius:7px 7px;
-	-moz-box-shadow: 0px 1px 2px #333;
-	-webkit-box-shadow: 0px 1px 2px #333;
-	box-shadow: 0px 1px 2px #333;
-	}
-
-.tablebg td{
-}	
+  padding: 3px;
+  border-radius:7px 7px;
+  box-shadow: 0px 1px 2px #333;
+}
 
 .catdiv {
-	border-left: 0 none !important; 
 	height: 28px;
 	margin: 0;
 	padding: 0;
@@ -601,10 +594,10 @@ td.profile {
 }
 
 .cat {
-	border-right: 0 none !important; 	
 	height: 28px;
 	margin: 0;
 	padding: 0;
+	border: 0;
 	background-color: #C7D0D7;
 	background-image: url('./images/cellpic1.gif');
 	text-indent: 4px;
@@ -613,13 +606,13 @@ td.profile {
 .row1 {
 	background-color: #ECECEC;
 	padding: 4px;
-	border:1px solid #A9B8C2;
+  border:1px solid #A9B8C2;
 }
 
 .row2 {
 	background-color: #DCE1E5;
 	padding: 4px;
-	border:1px solid #A9B8C2;
+  border:1px solid #A9B8C2;
 }
 
 .row3 {
@@ -629,6 +622,14 @@ td.profile {
 
 .spacer {
 	background-color: #D1D7DC;
+}
+
+.current {
+	background-color: lightblue;
+}
+
+.current {
+  background-color: lightblue;
 }
 
 hr {
@@ -645,12 +646,20 @@ hr {
 
 /* Links
  ------------ */
+
+/* Links adjustment to correctly display an order of rtl/ltr mixed content */
+.rtl a {
+	direction: rtl;
+	unicode-bidi: embed;
+}
+
+/* CSS spec requires a:link, a:visited, a:hover and a:active rules to be specified in this order. */
+/* See http://www.phpbb.com/bugs/phpbb3/59685 */
 a:link {
 	color: #006597;
 	text-decoration: none;
 }
 
-a:active,
 a:visited {
 	color: #005784;
 	text-decoration: none;
@@ -659,6 +668,11 @@ a:visited {
 a:hover {
 	color: #D46400;
 	text-decoration: underline;
+}
+
+a:active {
+	color: #005784;
+	text-decoration: none;
 }
 
 a.forumlink {
@@ -713,7 +727,7 @@ textarea {
 	background-color: #FAFAFA;
 	color: #333333;
 	font-family: "Lucida Grande", Verdana, Helvetica, Arial, sans-serif;
-	font-size: 1.3em; 
+	font-size: 1.3em;
 	line-height: 1.4em;
 	font-weight: normal;
 	border: 1px solid #A9B8C2;
@@ -793,6 +807,9 @@ input.radio {
 	border-style: none;
 }
 
+input:focus, select:focus, textarea:focus {
+	outline-style: none;
+}
 
 /* BBCode
  ------------ */
@@ -933,6 +950,6 @@ input.openid_login {
 
 }
 #openid fieldset{
-	border: 0px none;
+  border: 0px none;
 }
 
