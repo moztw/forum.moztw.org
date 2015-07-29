@@ -546,11 +546,11 @@ p.topicdetails {
 /* Tables
  ------------ */
 th {
-	color: #FFA34F;
+	color: #FFFFFF;
 	font-size: 1.1em;
 	font-weight: bold;
 	background-color: #006699;
-	background-image: url('./images/cellpic3.gif');
+	background-image: url('./images/cellpic3.png');
 	white-space: nowrap;
 	padding: 7px 5px;
 }
@@ -939,4 +939,3 @@ input.openid_login {
 #openid fieldset{
   border: 0px none;
 }
-
