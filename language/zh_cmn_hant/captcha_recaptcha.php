@@ -15,12 +15,12 @@
 */
 if (!defined('IN_PHPBB'))
 {
-	exit;
+    exit;
 }
 
 if (empty($lang) || !is_array($lang))
 {
-	$lang = array();
+    $lang = array();
 }
 
 // DEVELOPERS PLEASE NOTE
@@ -36,17 +36,17 @@ if (empty($lang) || !is_array($lang))
 // in a url you again do not need to specify an order e.g., 'Click %sHERE%s' is fine
 
 $lang = array_merge($lang, array(
-	'RECAPTCHA_LANG'				=> '英文',
-  'RECAPTCHA_NOT_AVAILABLE'		=> '為了使用 reCaptcha，您必須要在 <a href="http://www.google.com/recaptcha">www.google.com/recaptcha</a> 註冊一個帳號。',
-	'CAPTCHA_RECAPTCHA'				=> 'reCaptcha',
-	'RECAPTCHA_INCORRECT'			=> '您輸入的確認代碼是不正確的。',
+    'RECAPTCHA_LANG'                => 'zh-TW',
+    'RECAPTCHA_NOT_AVAILABLE'       => '為了使用 reCAPTCHA，您必須要在 <a href="http://www.google.com/recaptcha">www.google.com/recaptcha</a> 註冊一個帳號。',
+    'CAPTCHA_RECAPTCHA'             => 'reCAPTCHA',
+    'RECAPTCHA_INCORRECT'           => '驗證失敗。',
 
-	'RECAPTCHA_PUBLIC'				=> '公開的 reCaptcha 關鍵碼',
-	'RECAPTCHA_PUBLIC_EXPLAIN'		=> '您公開的 reCaptcha 關鍵碼。此關鍵碼可以在 <a href="www.google.com/recaptcha">www.google.com/recaptcha</a> 獲得。',
-	'RECAPTCHA_PRIVATE'				=> '私密的 reCaptcha 關鍵碼',
-	'RECAPTCHA_PRIVATE_EXPLAIN'		=> '您私密的 reCaptcha 關鍵碼。此關鍵碼可以在 <a href="www.google.com/recaptcha">www.google.com/recaptcha</a> 獲得。',
+    'RECAPTCHA_PUBLIC'              => 'reCAPTCHA 網站金鑰',
+    'RECAPTCHA_PUBLIC_EXPLAIN'      => '您的 reCAPTCHA 網站金鑰。此關鍵碼可以在 <a href="www.google.com/recaptcha">www.google.com/recaptcha</a> 獲得。',
+    'RECAPTCHA_PRIVATE'             => 'reCAPTCHA 密鑰',
+    'RECAPTCHA_PRIVATE_EXPLAIN'     => '您的 reCAPTCHA 密鑰。此關鍵碼可以在 <a href="www.google.com/recaptcha">www.google.com/recaptcha</a> 獲得。',
 
-	'RECAPTCHA_EXPLAIN'				=> '為了防止自動提交，我們要求您在底部欄位中，輸入顯示在其上方的兩個字詞。',
+    'RECAPTCHA_EXPLAIN'             => '為了防止機器人自動提交，我們要求您進行 reCAPTCHA 驗證。',
 ));
 
 ?>
